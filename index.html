@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ride Filter — pickup distance और trip distance के हिसाब से राइड फ़िल्टर करने में मदद करने वाला Android ऐप।">
+  <title>Ride Filter | Android App</title>
+  <style>
+    :root { --bg:#0b1220; --panel:#121d31; --text:#f5f7fb; --muted:#b8c3d6; --accent:#42d392; --line:#263650; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:Arial, sans-serif; background:linear-gradient(160deg,#0b1220,#101b2e); color:var(--text); line-height:1.6; }
+    .wrap { width:min(100% - 32px, 980px); margin:auto; }
+    header { padding:22px 0; border-bottom:1px solid var(--line); }
+    .brand { font-size:1.25rem; font-weight:800; letter-spacing:.3px; }
+    .brand span { color:var(--accent); }
+    .hero { padding:64px 0 42px; display:grid; grid-template-columns:1.3fr .7fr; gap:30px; align-items:center; }
+    .tag { color:var(--accent); font-weight:700; font-size:.9rem; }
+    h1 { font-size:clamp(2.2rem,6vw,4rem); line-height:1.08; margin:12px 0 18px; }
+    p { color:var(--muted); }
+    .btn { display:inline-block; background:var(--accent); color:#052116; text-decoration:none; padding:13px 20px; border-radius:12px; font-weight:800; margin:12px 8px 0 0; }
+    .btn.secondary { background:transparent; border:1px solid var(--line); color:var(--text); }
+    .phone { border:1px solid var(--line); background:var(--panel); padding:24px; border-radius:24px; box-shadow:0 20px 60px #0004; }
+    .phone .pill { display:block; background:#1b2b43; border-radius:12px; padding:13px; margin:12px 0; color:#eaf2ff; }
+    section { padding:34px 0; }
+    h2 { font-size:1.7rem; margin:0 0 12px; }
+    .cards { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+    .card { background:var(--panel); border:1px solid var(--line); border-radius:16px; padding:20px; }
+    .card h3 { margin:0 0 8px; }
+    .card p { margin:0; }
+    .notice { border:1px solid #6a5730; background:#2b2518; color:#f5dfaa; padding:14px 16px; border-radius:12px; }
+    footer { border-top:1px solid var(--line); padding:24px 0 36px; margin-top:24px; color:var(--muted); font-size:.92rem; }
+    footer a { color:var(--accent); }
+    @media(max-width:720px) { .hero { grid-template-columns:1fr; padding-top:42px; } .cards { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap brand">RIDE <span>FILTER</span></div>
+  </header>
+  <main class="wrap">
+    <div class="hero">
+      <div>
+        <div class="tag">ANDROID APP</div>
+        <h1>राइड चुनने में<br>ज़्यादा कंट्रोल।</h1>
+        <p>Ride Filter को pickup distance और trip distance जैसी सेटिंग्स के आधार पर राइड फ़िल्टर करने में मदद के लिए बनाया जा रहा है। इस्तेमाल करने से पहले ऐप की सेटिंग्स और अपने ड्राइवर ऐप के नियम ज़रूर जाँचें।</p>
+        <a class="btn" href="https://github.com/shubhamkashyap5650-bot/RideFilter/raw/refs/heads/main/app-debug.apk">APK डाउनलोड करें</a>
+        <a class="btn secondary" href="#features">फीचर्स देखें</a>
+      </div>
+      <div class="phone" aria-label="Ride Filter feature preview">
+        <div class="tag">RIDE FILTER</div>
+        <h2>आपकी सेटिंग्स</h2>
+        <span class="pill">Pickup Distance Filter</span>
+        <span class="pill">Trip Distance Filter</span>
+        <span class="pill">Auto / Manual Mode</span>
+        <span class="pill">Ride Status</span>
+      </div>
+    </div>
+
+    <section id="features">
+      <h2>मुख्य फीचर्स</h2>
+      <div class="cards">
+        <div class="card"><h3>Pickup Distance</h3><p>पिकअप तक की दूरी के लिए अपनी पसंद की सीमा सेट करने का विकल्प।</p></div>
+        <div class="card"><h3>Trip Distance</h3><p>ट्रिप की दूरी के आधार पर राइड फ़िल्टर करने की सेटिंग।</p></div>
+        <div class="card"><h3>Ride Status</h3><p>ऐप में उपलब्ध राइड स्थिति और संबंधित जानकारी देखने का विकल्प।</p></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>डाउनलोड करने से पहले</h2>
+      <div class="notice">यह APK GitHub से डाउनलोड होगी। Android फोन पर unknown apps से इंस्टॉल करने की अनुमति माँगी जा सकती है। APK केवल तभी इंस्टॉल करें जब आप स्रोत पर भरोसा करते हों। ऐप का इस्तेमाल संबंधित ड्राइवर प्लेटफ़ॉर्म की शर्तों और स्थानीय नियमों के अनुसार करें।</div>
+    </section>
+
+    <section id="contact">
+      <h2>सहायता और संपर्क</h2>
+      <p>सहायता के लिए यहाँ अपना सही WhatsApp नंबर या ईमेल जोड़ना बाकी है। प्रकाशित करने से पहले इस जानकारी को अपडेट करें।</p>
+      <p><strong>ईमेल:</strong> अपना सपोर्ट ईमेल यहाँ जोड़ें</p>
+      <p><strong>WhatsApp:</strong> अपना सार्वजनिक सपोर्ट नंबर यहाँ जोड़ें</p>
+    </section>
+
+    <section id="policies">
+      <h2>नीतियाँ</h2>
+      <p>Privacy Policy, Terms & Conditions और Refund/Cancellation Policy के लिंक प्रकाशित करने से पहले जोड़ने होंगे। इन्हें आपके ऐप के वास्तविक डेटा उपयोग, पास/पेमेंट व्यवस्था और सहायता प्रक्रिया के अनुसार तैयार करना ज़रूरी है।</p>
+    </section>
+  </main>
+  <footer>
+    <div class="wrap">
+      <div>© Ride Filter. सभी अधिकार सुरक्षित।</div>
+      <p>यह वेबसाइट अभी प्रारंभिक ड्राफ्ट है। संपर्क विवरण और नीतियाँ सत्यापित करके ही इसे भुगतान सेवा के आवेदन में इस्तेमाल करें।</p>
+    </div>
+  </footer>
+</body>
+</html>
