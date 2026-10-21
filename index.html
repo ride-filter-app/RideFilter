@@ -6,7 +6,6 @@
   <meta name="description" content="Ride Filter Android ऐप — pickup distance और trip distance के आधार पर राइड फ़िल्टर करने में मदद।">
   <meta name="theme-color" content="#0b1220">
   <title>Ride Filter | Android App</title>
-
   <style>
     :root {
       --bg: #0b1220;
@@ -16,10 +15,8 @@
       --accent: #42d392;
       --line: #263650;
     }
-
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
-
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -27,40 +24,13 @@
       color: var(--text);
       line-height: 1.7;
     }
-
-    .wrap {
-      width: min(100% - 32px, 980px);
-      margin: auto;
-    }
-
-    header {
-      padding: 20px 0;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .brand {
-      font-size: 1.25rem;
-      font-weight: 800;
-    }
-
+    .wrap { width: min(100% - 32px, 980px); margin: auto; }
+    header { padding: 20px 0; border-bottom: 1px solid var(--line); }
+    .brand { font-size: 1.25rem; font-weight: 800; }
     .brand span { color: var(--accent); }
-
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      padding: 14px 0 0;
-    }
-
-    nav a, footer a, .text-link {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    nav a:hover, footer a:hover, .text-link:hover {
-      text-decoration: underline;
-    }
-
+    nav { display: flex; flex-wrap: wrap; gap: 14px; padding: 14px 0 0; }
+    nav a, footer a, .text-link { color: var(--accent); text-decoration: none; }
+    nav a:hover, footer a:hover, .text-link:hover { text-decoration: underline; }
     .hero {
       padding: 55px 0 40px;
       display: grid;
@@ -68,27 +38,11 @@
       gap: 30px;
       align-items: center;
     }
-
-    .tag {
-      color: var(--accent);
-      font-weight: 700;
-      font-size: .9rem;
-    }
-
-    h1 {
-      font-size: clamp(2.2rem, 6vw, 4rem);
-      line-height: 1.1;
-      margin: 12px 0 18px;
-    }
-
-    h2 {
-      font-size: 1.7rem;
-      margin: 0 0 14px;
-    }
-
+    .tag { color: var(--accent); font-weight: 700; font-size: .9rem; }
+    h1 { font-size: clamp(2.2rem, 6vw, 4rem); line-height: 1.1; margin: 12px 0 18px; }
+    h2 { font-size: 1.7rem; margin: 0 0 14px; }
     h3 { margin-top: 0; }
     p, li { color: var(--muted); }
-
     .btn {
       display: inline-block;
       background: var(--accent);
@@ -99,85 +53,26 @@
       font-weight: 800;
       margin: 10px 8px 0 0;
     }
-
     .btn:hover { opacity: .9; }
-
-    .btn.secondary {
-      background: transparent;
-      border: 1px solid var(--line);
-      color: var(--text);
-    }
-
-    .phone, .card {
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      padding: 20px;
-    }
-
-    .phone {
-      border-radius: 24px;
-      box-shadow: 0 20px 60px #0004;
-    }
-
-    .pill {
-      display: block;
-      background: #1b2b43;
-      border-radius: 12px;
-      padding: 12px;
-      margin: 12px 0;
-      color: #eaf2ff;
-    }
-
-    section {
-      padding: 30px 0;
-      scroll-margin-top: 20px;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-    }
-
+    .btn.secondary { background: transparent; border: 1px solid var(--line); color: var(--text); }
+    .phone, .card { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 20px; }
+    .phone { border-radius: 24px; box-shadow: 0 20px 60px #0004; }
+    .pill { display: block; background: #1b2b43; border-radius: 12px; padding: 12px; margin: 12px 0; color: #eaf2ff; }
+    section { padding: 30px 0; scroll-margin-top: 20px; }
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
     .card p { margin-bottom: 0; }
-
-    .notice {
-      border: 1px solid #6a5730;
-      background: #2b2518;
-      color: #f5dfaa;
-      padding: 14px 16px;
-      border-radius: 12px;
-    }
-
-    .policy {
-      border-top: 1px solid var(--line);
-      padding-top: 24px;
-      margin-top: 20px;
-    }
-
-    footer {
-      border-top: 1px solid var(--line);
-      padding: 24px 0 36px;
-      margin-top: 24px;
-      font-size: .92rem;
-    }
-
+    .notice { border: 1px solid #6a5730; background: #2b2518; color: #f5dfaa; padding: 14px 16px; border-radius: 12px; }
+    .policy { border-top: 1px solid var(--line); padding-top: 24px; margin-top: 20px; }
+    footer { border-top: 1px solid var(--line); padding: 24px 0 36px; margin-top: 24px; font-size: .92rem; }
     .small { font-size: .9rem; }
     .contact-link { overflow-wrap: anywhere; }
-
     @media (max-width: 720px) {
-      .hero {
-        grid-template-columns: 1fr;
-        padding-top: 35px;
-      }
-
+      .hero { grid-template-columns: 1fr; padding-top: 35px; }
       .cards { grid-template-columns: 1fr; }
       nav { gap: 10px 14px; }
     }
   </style>
 </head>
-
 <body>
 <header>
   <div class="wrap">
@@ -198,22 +93,10 @@
     <div>
       <div class="tag">ANDROID APP</div>
       <h1>राइड चुनने में<br>ज़्यादा कंट्रोल।</h1>
-      <p>
-        Ride Filter को pickup distance और trip distance जैसी
-        सेटिंग्स के आधार पर राइड फ़िल्टर करने में मदद के लिए
-        बनाया गया है। उपलब्ध सुविधाएँ ऐप के वर्तमान संस्करण
-        पर निर्भर करेंगी।
-      </p>
-
-      <a class="btn"
-         href="./app-debug.apk"
-         download="RideFilter.apk">
-        APK डाउनलोड करें
-      </a>
-
+      <p>Ride Filter को pickup distance और trip distance जैसी सेटिंग्स के आधार पर राइड फ़िल्टर करने में मदद के लिए बनाया गया है। उपलब्ध सुविधाएँ ऐप के वर्तमान संस्करण पर निर्भर करेंगी।</p>
+      <a class="btn" href="./app-debug.apk" download="RideFilter.apk">APK डाउनलोड करें</a>
       <a class="btn secondary" href="#features">फीचर्स देखें</a>
     </div>
-
     <div class="phone">
       <div class="tag">RIDE FILTER</div>
       <h2>ऐप फीचर्स</h2>
@@ -228,83 +111,38 @@
     <div class="cards">
       <div class="card">
         <h3>Pickup Distance</h3>
-        <p>
-          पिकअप तक की दूरी के लिए उपलब्ध सीमा सेट करने का विकल्प।
-          Set your preferred pickup distance limit.
-        </p>
+        <p>पिकअप तक की दूरी के लिए उपलब्ध सीमा सेट करने का विकल्प। Set your preferred pickup distance limit.</p>
       </div>
-
       <div class="card">
         <h3>Trip Distance</h3>
-        <p>
-          ट्रिप की दूरी के आधार पर राइड फ़िल्टर करने की सेटिंग।
-          Filter rides based on trip distance.
-        </p>
+        <p>ट्रिप की दूरी के आधार पर राइड फ़िल्टर करने की सेटिंग। Filter rides based on trip distance.</p>
       </div>
-
       <div class="card">
         <h3>Ride Status</h3>
-        <p>
-          ऐप में उपलब्ध राइड स्थिति और संबंधित जानकारी देखने का विकल्प।
-          View ride status information available in the app.
-        </p>
+        <p>ऐप में उपलब्ध राइड स्थिति और संबंधित जानकारी देखने का विकल्प। View ride status information available in the app.</p>
       </div>
     </div>
   </section>
 
   <section id="download">
     <h2>ऐप डाउनलोड करें | Download the App</h2>
-    <p>
-      Ride Filter की Android APK नीचे दिए गए बटन से डाउनलोड करें।
-    </p>
-
-    <a class="btn"
-       href="./app-debug.apk"
-       download="RideFilter.apk">
-      डाउनलोड करें | Download APK
-    </a>
-
+    <p>Ride Filter की Android APK नीचे दिए गए बटन से डाउनलोड करें।</p>
+    <a class="btn" href="./app-debug.apk" download="RideFilter.apk">डाउनलोड करें | Download APK</a>
     <div class="notice">
       <strong>इंस्टॉल करने से पहले:</strong>
-      Android फोन पर इस स्रोत से APK इंस्टॉल करने की अनुमति माँगी
-      जा सकती है। APK केवल तभी इंस्टॉल करें जब आप स्रोत पर भरोसा
-      करते हों। अपने ड्राइवर प्लेटफ़ॉर्म की शर्तों और स्थानीय
-      नियमों का पालन करें.
-      <p>
-        <strong>Before downloading:</strong>
-        Android may ask you to allow installation from this source.
-        Install only if you trust the source and follow applicable
-        platform terms and local laws.
-      </p>
+      Android फोन पर इस स्रोत से APK इंस्टॉल करने की अनुमति माँगी जा सकती है। APK केवल तभी इंस्टॉल करें जब आप स्रोत पर भरोसा करते हों। अपने ड्राइवर प्लेटफ़ॉर्म की शर्तों और स्थानीय नियमों का पालन करें।
+      <p><strong>Before downloading:</strong> Android may ask you to allow installation from this source. Install only if you trust the source and follow applicable platform terms and local laws.</p>
     </div>
   </section>
 
   <section id="privacy" class="policy">
     <h2>Privacy Policy (गोपनीयता नीति)</h2>
     <p><strong>अंतिम अपडेट:</strong> 20 अक्टूबर 2026</p>
-
     <h3>1. परिचय | Introduction</h3>
-    <p>
-      यह नीति Ride Filter वेबसाइट और ऐप के उपयोग से संबंधित
-      जानकारी के बारे में बताती है। इसे अपने ऐप के वास्तविक
-      डेटा संग्रह और उपयोग के अनुसार अद्यतन रखें।
-    </p>
-
+    <p>यह नीति Ride Filter वेबसाइट और ऐप के उपयोग से संबंधित जानकारी के बारे में बताती है। इसे अपने ऐप के वास्तविक डेटा संग्रह और उपयोग के अनुसार अद्यतन रखें।</p>
     <h3>2. जानकारी का संग्रह | Information We Handle</h3>
-    <p>
-      ऐप में इस्तेमाल की गई सुविधाओं के आधार पर लॉगिन के लिए
-      फोन नंबर, ऐप सेटिंग्स, तकनीकी जानकारी या सहायता के लिए
-      आपके द्वारा भेजी गई जानकारी प्रोसेस हो सकती है।
-      केवल वही जानकारी सूचीबद्ध करें जिसे ऐप वास्तव में
-      एकत्र करता है या प्रोसेस करता है।
-    </p>
-    <p>
-      यदि भुगतान सुविधा सक्रिय है, तो भुगतान की स्थिति और
-      ऑर्डर पहचान जैसी जानकारी प्रोसेस हो सकती है।
-      अपना UPI PIN, OTP या पूरा कार्ड नंबर ईमेल या WhatsApp
-      पर कभी साझा न करें।
-    </p>
-
+    <p>ऐप में इस्तेमाल की गई सुविधाओं के आधार पर लॉगिन के लिए फोन नंबर, ऐप सेटिंग्स, तकनीकी जानकारी या सहायता के लिए आपके द्वारा भेजी गई जानकारी प्रोसेस हो सकती है। केवल वही जानकारी सूचीबद्ध करें जिसे ऐप वास्तव में एकत्र करता है या प्रोसेस करता है।</p>
+    <p>यदि भुगतान सुविधा सक्रिय है, तो भुगतान की स्थिति और ऑर्डर पहचान जैसी जानकारी प्रोसेस हो सकती है। अपना UPI PIN, OTP या पूरा कार्ड नंबर ईमेल या WhatsApp पर कभी साझा न करें।</p>
     <h3>3. जानकारी का उपयोग | Use of Information</h3>
     <ul>
       <li>ऐप की उपलब्ध सुविधाएँ और लॉगिन प्रदान करने के लिए।</li>
@@ -312,48 +150,24 @@
       <li>भुगतान और पास की स्थिति संभालने के लिए, यदि यह सुविधा सक्रिय हो।</li>
       <li>सुरक्षा और लागू कानूनी दायित्वों के लिए।</li>
     </ul>
-
     <h3>4. जानकारी साझा करना | Sharing</h3>
-    <p>
-      आवश्यक होने पर जानकारी उन सेवा प्रदाताओं के साथ प्रोसेस
-      हो सकती है जो ऐप की होस्टिंग, लॉगिन, डेटाबेस या भुगतान
-      सुविधाएँ उपलब्ध कराते हैं। कानून द्वारा आवश्यक होने पर
-      जानकारी संबंधित अधिकारियों को दी जा सकती है।
-      जानकारी साझा करने की वास्तविक व्यवस्था के अनुसार इस
-      नीति को अपडेट करें।
-    </p>
-
+    <p>आवश्यक होने पर जानकारी उन सेवा प्रदाताओं के साथ प्रोसेस हो सकती है जो ऐप की होस्टिंग, लॉगिन, डेटाबेस या भुगतान सुविधाएँ उपलब्ध कराते हैं। कानून द्वारा आवश्यक होने पर जानकारी संबंधित अधिकारियों को दी जा सकती है। जानकारी साझा करने की वास्तविक व्यवस्था के अनुसार इस नीति को अपडेट करें।</p>
     <h3>5. सुरक्षा और संरक्षण | Security and Retention</h3>
-    <p>
-      जानकारी की सुरक्षा के लिए उचित उपाय अपनाएँ। इंटरनेट पर
-      कोई भी प्रणाली पूर्ण सुरक्षा की गारंटी नहीं देती।
-      डेटा कितने समय तक रखा जाता है, यह ऐप की वास्तविक
-      व्यवस्था और लागू कानून के अनुसार होना चाहिए।
-    </p>
-
+    <p>जानकारी की सुरक्षा के लिए उचित उपाय अपनाएँ। इंटरनेट पर कोई भी प्रणाली पूर्ण सुरक्षा की गारंटी नहीं देती। डेटा कितने समय तक रखा जाता है, यह ऐप की वास्तविक व्यवस्था और लागू कानून के अनुसार होना चाहिए।</p>
     <h3>6. आपके विकल्प | Your Choices</h3>
-    <p>
-      अपनी जानकारी तक पहुँचने, उसे सुधारने या हटाने के अनुरोध
-      के लिए नीचे दिए गए सपोर्ट संपर्क का उपयोग करें।
-      कानूनी दायित्वों के कारण कुछ जानकारी रखना आवश्यक हो सकता है।
-    </p>
-
+    <p>अपनी जानकारी तक पहुँचने, उसे सुधारने या हटाने के अनुरोध के लिए नीचे दिए गए सपोर्ट संपर्क का उपयोग करें। कानूनी दायित्वों के कारण कुछ जानकारी रखना आवश्यक हो सकता है।</p>
     <h3>7. बच्चों की गोपनीयता | Children's Privacy</h3>
     <p>यह ऐप ड्राइवरों के उपयोग के लिए बनाया गया है और बच्चों को लक्षित नहीं करता।</p>
-
     <h3>8. नीति में बदलाव | Changes</h3>
     <p>नीति में बदलाव होने पर अपडेटेड संस्करण इसी वेबसाइट पर प्रकाशित किया जा सकता है।</p>
-
     <p>प्रश्नों के लिए <a class="text-link" href="#contact">Contact Us</a> देखें।</p>
   </section>
 
   <section id="terms" class="policy">
     <h2>Terms &amp; Conditions (नियम और शर्तें)</h2>
     <p><strong>अंतिम अपडेट:</strong> 20 अक्टूबर 2026</p>
-
     <h3>1. सेवा का उद्देश्य</h3>
     <p>Ride Filter एक स्वतंत्र Android ऐप है जिसका उद्देश्य उपलब्ध सुविधाओं के अनुसार राइड से संबंधित सेटिंग्स और फ़िल्टरिंग में सहायता करना है।</p>
-
     <h3>2. उपयोगकर्ता की जिम्मेदारी</h3>
     <ul>
       <li>ऐप का उपयोग वैध उद्देश्यों के लिए करें।</li>
@@ -361,22 +175,16 @@
       <li>अपने फोन और लॉगिन विवरण की सुरक्षा बनाए रखें।</li>
       <li>ऐप की अनुमतियाँ समझकर ही प्रदान करें।</li>
     </ul>
-
     <h3>3. राइड की गारंटी नहीं</h3>
     <p>Ride Filter किसी राइड के उपलब्ध होने, स्वीकार होने, कमाई होने या किसी बाहरी प्लेटफ़ॉर्म के साथ अनुकूलता की गारंटी नहीं देता। परिणाम बाहरी ऐप, नेटवर्क, डिवाइस और संबंधित सेवाओं पर निर्भर हो सकते हैं।</p>
-
     <h3>4. पास और भुगतान</h3>
     <p>यदि सशुल्क पास उपलब्ध हों, तो उनकी कीमत, अवधि और लागू शर्तें भुगतान से पहले स्पष्ट रूप से दिखाई जानी चाहिए। पास सक्रिय करने से पहले भुगतान की पुष्टि की जानी चाहिए। भुगतान की स्क्रीन पर सफलता दिखना अपने आप पास सक्रिय होने का प्रमाण नहीं है।</p>
-
     <h3>5. सेवा में बदलाव</h3>
     <p>सुरक्षा, रखरखाव या तकनीकी कारणों से सुविधाओं में बदलाव या अस्थायी रुकावट हो सकती है।</p>
-
     <h3>6. बाहरी सेवाएँ</h3>
     <p>बाहरी वेबसाइटों और भुगतान सेवाओं का उपयोग उनकी अपनी शर्तों और गोपनीयता नीतियों के अधीन होगा।</p>
-
     <h3>7. स्वतंत्र ऐप</h3>
     <p>Ride Filter एक स्वतंत्र परियोजना है। जब तक स्पष्ट रूप से अधिकृत न हो, यह Uber, Ola, Rapido या किसी अन्य ड्राइवर प्लेटफ़ॉर्म का आधिकारिक ऐप या भागीदार होने का दावा नहीं करता।</p>
-
     <h3>8. नियमों में बदलाव</h3>
     <p>अपडेट किए गए नियम इसी पेज पर प्रकाशित किए जा सकते हैं। लागू कानून के अंतर्गत आपके अधिकार अप्रभावित रहेंगे।</p>
   </section>
@@ -384,46 +192,26 @@
   <section id="refund" class="policy">
     <h2>Refund &amp; Cancellation Policy (रिफंड नीति)</h2>
     <p><strong>अंतिम अपडेट:</strong> 20 अक्टूबर 2026</p>
-
     <h3>1. भुगतान की पुष्टि</h3>
     <p>पास की खरीदारी के बाद भुगतान की पुष्टि होने पर ही पास सक्रिय किया जाना चाहिए। पैसा कटने पर पास सक्रिय न हो, तो सपोर्ट से संपर्क करें और भुगतान की तारीख, रकम तथा ऑर्डर या भुगतान पहचान दें। अपना UPI PIN या OTP साझा न करें।</p>
-
     <h3>2. दोहरा भुगतान या तकनीकी त्रुटि</h3>
     <p>दोहरे भुगतान या गलत रकम कटने की स्थिति में लेनदेन की जाँच के बाद लागू नियमों के अनुसार समाधान या रिफंड की प्रक्रिया की जाएगी।</p>
-
     <h3>3. रिफंड अनुरोध</h3>
     <p>रिफंड अनुरोध सपोर्ट संपर्क के माध्यम से भेजें। भुगतान का प्रमाण और ऑर्डर पहचान दें। अनुरोध की जाँच वास्तविक लेनदेन और लागू कानून के अनुसार होगी।</p>
-
     <h3>4. पास का उपयोग</h3>
     <p>उपयोग किए गए या समाप्त हो चुके पास के रिफंड का निर्णय खरीदारी के समय बताई गई शर्तों और लागू कानून के अनुसार किया जाएगा। यह नीति उपभोक्ता के कानूनी अधिकारों को सीमित नहीं करती।</p>
-
     <h3>5. रिफंड का समय</h3>
     <p>रिफंड स्वीकृत होने पर रकम संबंधित भुगतान सेवा प्रदाता और बैंक की प्रक्रिया के अनुसार लौटाई जाएगी। खाते में रकम दिखने का समय बैंक या भुगतान सेवा पर निर्भर हो सकता है।</p>
-
     <p>भुगतान सहायता के लिए <a class="text-link" href="#contact">Contact Us</a> देखें।</p>
   </section>
 
   <section id="contact" class="policy">
     <h2>Contact Us (संपर्क करें)</h2>
     <p>ऐप, लॉगिन, भुगतान, पास या रिफंड से संबंधित सहायता के लिए नीचे दिए गए संपर्क विवरण का उपयोग करें।</p>
-
     <p><strong>ऐप का नाम:</strong> Ride Filter</p>
-
-    <p>
-      <strong>ईमेल:</strong>
-      <a class="text-link contact-link" href="mailto:ridefiltersupport@gmail.com">ridefiltersupport@gmail.com</a>
-    </p>
-
-    <p>
-      <strong>WhatsApp:</strong>
-      <a class="text-link contact-link" href="https://wa.me/919068920822" target="_blank" rel="noopener noreferrer">+91 90689 20822</a>
-    </p>
-
-    <p>
-      <strong>फोन:</strong>
-      <a class="text-link" href="tel:+919068920822">+91 90689 20822</a>
-    </p>
-
+    <p><strong>ईमेल:</strong> <a class="text-link contact-link" href="mailto:ridefiltersupport@gmail.com">ridefiltersupport@gmail.com</a></p>
+    <p><strong>WhatsApp:</strong> <a class="text-link contact-link" href="https://wa.me/919068920822" target="_blank" rel="noopener noreferrer">+91 90689 20822</a></p>
+    <p><strong>फोन:</strong> <a class="text-link" href="tel:+919068920822">+91 90689 20822</a></p>
     <p class="small">कृपया सपोर्ट संदेश में अपना पासवर्ड, OTP, UPI PIN या पूरा कार्ड नंबर न भेजें।</p>
   </section>
 </main>
