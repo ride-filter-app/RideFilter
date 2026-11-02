@@ -13,7 +13,6 @@
 
   <link rel="canonical" href="https://ridefilter.in/">
 
-  <!-- Ride Filter Logo -->
   <link rel="icon" type="image/png" href="/ride-filter-logo.png.png">
   <link rel="apple-touch-icon" href="/ride-filter-logo.png.png">
   <meta property="og:image" content="https://ridefilter.in/ride-filter-logo.png.png">
@@ -369,6 +368,19 @@
       color: var(--muted);
     }
 
+    /* VIDEO PLAYER */
+    .demo-video {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 560px;
+      aspect-ratio: 16 / 9;
+      object-fit: contain;
+      background: #000;
+      border: 1px solid #52627a;
+      border-radius: 16px;
+    }
+
     .play {
       display: grid;
       place-items: center;
@@ -455,6 +467,40 @@
       font-size: 13px;
     }
 
+    /* FLOATING WHATSAPP BUTTON */
+    .whatsapp-float {
+      position: fixed;
+      right: 20px;
+      bottom: 22px;
+      z-index: 999;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 12px 18px;
+      border-radius: 50px;
+      background: #25D366;
+      color: #ffffff;
+      font-size: 15px;
+      font-weight: 800;
+      box-shadow: 0 5px 22px rgba(0, 0, 0, .4);
+      text-decoration: none;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .whatsapp-float:hover {
+      color: #ffffff;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 26px rgba(0, 0, 0, .5);
+    }
+
+    .whatsapp-float svg {
+      width: 23px;
+      height: 23px;
+      fill: currentColor;
+      flex-shrink: 0;
+    }
+
     @media (max-width: 850px) {
       .hero-grid {
         grid-template-columns: 1fr;
@@ -507,6 +553,16 @@
 
       .phone-screen {
         min-height: 290px;
+      }
+
+      .whatsapp-float {
+        right: 14px;
+        bottom: 14px;
+        padding: 12px;
+      }
+
+      .whatsapp-float span {
+        display: none;
       }
     }
   </style>
@@ -697,32 +753,33 @@
       <h2>Ride Filter कैसे काम करता है?</h2>
 
       <p class="section-intro">
-        यहाँ ऐप का असली 60 सेकंड का डेमो वीडियो जोड़ा जा सकता है।
-        वीडियो तैयार होने पर उसका YouTube लिंक या वेबसाइट पर
-        होस्ट किया गया वीडियो लिंक डालें।
+        Ride Filter का वीडियो डेमो यहाँ देखें।
       </p>
 
       <div class="video-grid">
 
-        <div class="video-placeholder">
-          <div>
-            <div class="play">▶</div>
-            <strong>60 सेकंड का डेमो जल्द जोड़ा जाएगा</strong>
-            <p class="small">
-              वास्तविक वीडियो लिंक मिलने के बाद इस जगह वीडियो दिखाई देगा।
-            </p>
-          </div>
+        <div>
+          <video class="demo-video"
+                 controls
+                 playsinline
+                 preload="metadata"
+                 poster="/ride-filter-logo.png.png">
+            <source src="/ridefilter-demo.mp4" type="video/mp4">
+            आपका ब्राउज़र वीडियो चलाने में सक्षम नहीं है।
+          </video>
+          <p class="small muted" style="margin-top:10px">
+            Ride Filter का आधिकारिक वीडियो डेमो।
+          </p>
         </div>
 
         <div class="video-panel">
-          <h3>वीडियो में क्या दिखाएँगे?</h3>
+          <h3>वीडियो में क्या दिखाया गया है?</h3>
           <p class="muted">• Pickup Distance सेटिंग</p>
           <p class="muted">• Minimum और Maximum Ride Distance</p>
           <p class="muted">• उपलब्ध Auto Accept विकल्प</p>
           <p class="muted">• APK डाउनलोड और इंस्टॉल करने का तरीका</p>
           <p class="small muted">
-            वीडियो को असली ऐप के स्क्रीन रिकॉर्डिंग और सही
-            वॉइसओवर से बनाना बेहतर रहेगा।
+            ऐप के वास्तविक उपयोग और सेटिंग्स की जानकारी वीडियो में देखें।
           </p>
         </div>
 
@@ -756,7 +813,7 @@
       </div>
 
       <div class="notice">
-        Android सुरक्षा चेतावनी दिखाए तो उसे ध्यान से पढ़ें
+        Android सुरक्षा चेतावनी दिखे तो उसे ध्यान से पढ़ें
         और डाउनलोड के स्रोत की पुष्टि करें। अनजान APK इंस्टॉल
         न करें और सुरक्षा सुविधाएँ बंद न करें।
       </div>
@@ -1090,6 +1147,20 @@
     </p>
   </div>
 </footer>
+
+<!-- FLOATING WHATSAPP BUTTON -->
+<a class="whatsapp-float"
+   href="https://chat.whatsapp.com/KxoLq2fBCbl5OqmsDmIwgU?s=cl&amp;p=a&amp;mlu=4&amp;ilr=4"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="Ride Filter WhatsApp Updates Group">
+
+  <svg viewBox="0 0 32 32" aria-hidden="true">
+    <path d="M16.02 3C8.85 3 3.02 8.77 3.02 15.88c0 2.27.6 4.48 1.74 6.43L3 29l6.9-1.8a13.1 13.1 0 0 0 6.12 1.52h.01c7.16 0 13-5.77 13-12.88 0-3.44-1.35-6.68-3.8-9.1A12.93 12.93 0 0 0 16.02 3zm0 23.53c-1.9 0-3.77-.5-5.4-1.45l-.39-.23-4.1 1.07 1.1-3.98-.25-.4a10.65 10.65 0 0 1-1.64-5.66c0-5.9 4.8-10.7 10.7-10.7 2.85 0 5.53 1.11 7.55 3.13a10.6 10.6 0 0 1 3.13 7.56c0 5.9-4.8 10.66-10.7 10.66zm5.88-8c-.32-.16-1.9-.93-2.2-1.03-.3-.11-.51-.16-.72.16-.21.32-.83 1.03-1.02 1.24-.19.21-.38.24-.7.08-.32-.16-1.35-.5-2.57-1.58-.95-.84-1.6-1.88-1.79-2.2-.19-.32-.02-.49.14-.65.14-.14.32-.38.48-.57.16-.19.21-.32.32-.53.1-.21.05-.4-.03-.56-.08-.16-.72-1.72-.99-2.36-.26-.62-.52-.54-.72-.55h-.61c-.21 0-.56.08-.85.4-.3.32-1.12 1.09-1.12 2.65s1.15 3.07 1.31 3.28c.16.21 2.25 3.42 5.45 4.8.76.33 1.35.53 1.81.68.76.24 1.45.21 2 .13.61-.09 1.9-.77 2.17-1.51.27-.75.27-1.39.19-1.52-.08-.14-.29-.22-.61-.38z"/>
+  </svg>
+
+  <span>WhatsApp</span>
+</a>
 
 <script>
   document.getElementById("year").textContent =
