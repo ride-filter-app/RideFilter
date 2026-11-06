@@ -1,471 +1,464 @@
-
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#101923">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101923">
 
-  <!-- RIDE FILTER FAVICON -->
-  <link rel="icon" type="image/png" href="/ride-filter-logo.png.png">
-  <link rel="apple-touch-icon" href="/ride-filter-logo.png.png">
+<link rel="icon" type="image/png" href="/ride-filter-logo.png.png">
+<link rel="apple-touch-icon" href="/ride-filter-logo.png.png">
 
-  <title>Ride Filter – Rapido Ride Filter &amp; Auto Accept App</title>
-  <meta name="description" content="Download Ride Filter Android app for Rapido drivers. Filter rides by pickup distance and trip distance, explore Auto Accept features, and get APK download and setup instructions.">
-  <meta name="robots" content="index, follow, max-image-preview:none">
-  <link rel="canonical" href="https://ridefilter.in/">
+<title>Ride Filter – Rapido Ride Filter App &amp; APK Download</title>
+<meta name="description" content="Download Ride Filter APK for Rapido drivers. Explore pickup distance filter, trip distance settings and Auto Accept features. Get the Android app and installation guide at Ride Filter.">
+<meta name="robots" content="index, follow, max-image-preview:none">
+<link rel="canonical" href="https://ridefilter.in/">
 
-  <!-- OPEN GRAPH: NO IMAGE -->
-  <meta property="og:site_name" content="Ride Filter">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Ride Filter App – Choose rides with more control">
-  <meta property="og:description" content="Explore Ride Filter features, Android APK download, setup instructions and support.">
-  <meta property="og:url" content="https://ridefilter.in/">
+<meta property="og:site_name" content="Ride Filter">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ride Filter App – Choose rides with more control">
+<meta property="og:description" content="Explore Ride Filter features, Android APK download, setup instructions and support.">
+<meta property="og:url" content="https://ridefilter.in/">
+<meta name="twitter:card" content="summary">
 
-  <!-- TWITTER: NO IMAGE -->
-  <meta name="twitter:card" content="summary">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Ride Filter",
+  "alternateName": "Ride Filter App",
+  "url": "https://ridefilter.in/"
+}
+</script>
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Ride Filter",
-    "alternateName": "Ride Filter App",
-    "url": "https://ridefilter.in/"
+<style>
+:root {
+  --bg: #0b1220;
+  --panel: #121d31;
+  --text: #f5f7fb;
+  --muted: #b8c3d6;
+  --accent: #d7ff64;
+  --line: #293951;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Arial, "Noto Sans Devanagari", sans-serif;
+  line-height: 1.7;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.wrap {
+  width: min(1120px, calc(100% - 32px));
+  margin: auto;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(11, 18, 32, .96);
+  border-bottom: 1px solid var(--line);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 0;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 21px;
+  font-weight: 900;
+  color: white;
+  white-space: nowrap;
+}
+
+.brand-logo {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+  border-radius: 9px;
+}
+
+.brand span { color: var(--accent); }
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+}
+
+nav a {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+nav a:hover { color: var(--accent); }
+
+.hero {
+  padding: 60px 0 58px;
+  background:
+    radial-gradient(ellipse at 85% 15%, rgba(215,255,100,.12), transparent 36%),
+    linear-gradient(145deg, #14243a, #0b1220 70%);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 36px;
+}
+
+.eyebrow {
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+h1 {
+  font-size: clamp(38px, 6vw, 66px);
+  line-height: 1.12;
+  margin: 15px 0 20px;
+}
+
+h2 {
+  font-size: clamp(28px, 4vw, 42px);
+  line-height: 1.2;
+  margin: 0 0 14px;
+}
+
+h3 {
+  font-size: 20px;
+  line-height: 1.35;
+  margin: 0 0 10px;
+}
+
+p { margin: 0 0 14px; }
+
+.lead {
+  color: var(--muted);
+  font-size: 19px;
+  max-width: 700px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 26px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 12px 19px;
+  border-radius: 13px;
+  border: 1px solid var(--line);
+  font-weight: 800;
+  text-align: center;
+}
+
+.primary {
+  background: var(--accent);
+  color: #15200a;
+  border-color: var(--accent);
+}
+
+.secondary {
+  color: var(--text);
+  background: rgba(255,255,255,.03);
+}
+
+.hero-art {
+  border: 1px solid #34445b;
+  background: linear-gradient(145deg, #1b2a42, #101923);
+  border-radius: 28px;
+  padding: 18px;
+  box-shadow: 0 24px 70px #0005;
+}
+
+.demo-video {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+  background: transparent;
+  border: none;
+  border-radius: 16px;
+  margin: 0 auto;
+}
+
+.trust-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  margin-top: 20px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.section { padding: 64px 0; }
+
+.section.alt {
+  background: #0e1727;
+  border-top: 1px solid #1b2a40;
+  border-bottom: 1px solid #1b2a40;
+}
+
+.section-intro {
+  color: var(--muted);
+  max-width: 780px;
+  font-size: 17px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 26px;
+}
+
+.card, .step, .price, .contact {
+  padding: 24px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+}
+
+.card p, .step p, .price p {
+  color: var(--muted);
+  margin: 0;
+}
+
+.icon {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 13px;
+  background: #26364c;
+  color: var(--accent);
+  font-size: 21px;
+  margin-bottom: 17px;
+}
+
+.notice {
+  padding: 18px;
+  margin-top: 22px;
+  border: 1px solid #6c5932;
+  background: #292317;
+  color: #f5dfae;
+  border-radius: 15px;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.step-num {
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.price-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-top: 25px;
+}
+
+.amount {
+  font-size: 30px;
+  font-weight: 900;
+  color: var(--accent);
+}
+
+.muted { color: var(--muted); }
+
+details {
+  padding: 18px;
+  margin-bottom: 12px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 15px;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+details p {
+  color: var(--muted);
+  margin: 12px 0 0;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-top: 24px;
+}
+
+footer {
+  border-top: 1px solid var(--line);
+  padding: 30px 0;
+  color: var(--muted);
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+  margin: 15px 0;
+}
+
+.small { font-size: 13px; }
+
+.whatsapp-float {
+  position: fixed;
+  right: 18px;
+  bottom: 22px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  animation: whatsappFloat 3s ease-in-out infinite;
+}
+
+.whatsapp-circle {
+  width: 64px;
+  height: 64px;
+  flex: 0 0 64px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #25D366;
+  color: #fff;
+  border: 3px solid #d8ffea;
+  box-shadow: 0 6px 24px rgba(0,0,0,.4);
+}
+
+.whatsapp-circle svg {
+  width: 34px;
+  height: 34px;
+  fill: currentColor;
+}
+
+.whatsapp-label {
+  background: #159b66;
+  color: #fff;
+  padding: 8px 13px;
+  border-radius: 14px;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1.2;
+  box-shadow: 0 5px 20px rgba(0,0,0,.3);
+}
+
+.whatsapp-label small {
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 3px;
+}
+
+@keyframes whatsappFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.whatsapp-float:hover {
+  animation-play-state: paused;
+  transform: translateY(-3px);
+}
+
+@media (max-width: 850px) {
+  .hero-grid { grid-template-columns: 1fr; }
+
+  .hero-art {
+    max-width: 430px;
+    width: 100%;
+    margin: auto;
   }
-  </script>
 
-  <style>
-    :root {
-      --bg: #0b1220;
-      --panel: #121d31;
-      --text: #f5f7fb;
-      --muted: #b8c3d6;
-      --accent: #d7ff64;
-      --line: #293951;
-    }
-
-    * { box-sizing: border-box; }
-
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 90px;
-    }
-
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--text);
-      font-family: Arial, "Noto Sans Devanagari", sans-serif;
-      line-height: 1.7;
-    }
-
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    a:focus-visible {
-      outline: 3px solid var(--accent);
-      outline-offset: 3px;
-    }
-
-    .wrap {
-      width: min(1120px, calc(100% - 32px));
-      margin: auto;
-    }
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      background: rgba(11, 18, 32, .96);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      padding: 14px 0;
-    }
-
-    .brand {
-      display: inline-flex;
-      align-items: center;
-      gap: 9px;
-      font-size: 21px;
-      font-weight: 900;
-      color: white;
-      white-space: nowrap;
-    }
-
-    .brand-logo {
-      width: 34px;
-      height: 34px;
-      object-fit: contain;
-      border-radius: 9px;
-    }
-
-    .brand span { color: var(--accent); }
-
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px 16px;
-    }
-
-    nav a {
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    nav a:hover { color: var(--accent); }
-
-    .hero {
-      padding: 60px 0 58px;
-      background:
-        radial-gradient(ellipse at 85% 15%, rgba(215,255,100,.12), transparent 36%),
-        linear-gradient(145deg, #14243a, #0b1220 70%);
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: center;
-      gap: 36px;
-    }
-
-    .eyebrow {
-      color: var(--accent);
-      font-size: 13px;
-      font-weight: 800;
-      letter-spacing: 1.5px;
-    }
-
-    h1 {
-      font-size: clamp(38px, 6vw, 66px);
-      line-height: 1.12;
-      margin: 15px 0 20px;
-    }
-
-    h2 {
-      font-size: clamp(28px, 4vw, 42px);
-      line-height: 1.2;
-      margin: 0 0 14px;
-    }
-
-    h3 {
-      font-size: 20px;
-      line-height: 1.35;
-      margin: 0 0 10px;
-    }
-
-    p { margin: 0 0 14px; }
-
-    .lead {
-      color: var(--muted);
-      font-size: 19px;
-      max-width: 700px;
-    }
-
-    .actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 26px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 48px;
-      padding: 12px 19px;
-      border-radius: 13px;
-      border: 1px solid var(--line);
-      font-weight: 800;
-      text-align: center;
-    }
-
-    .primary {
-      background: var(--accent);
-      color: #15200a;
-      border-color: var(--accent);
-    }
-
-    .secondary {
-      color: var(--text);
-      background: rgba(255,255,255,.03);
-    }
-
-    .hero-art {
-      border: 1px solid #34445b;
-      background: linear-gradient(145deg, #1b2a42, #101923);
-      border-radius: 28px;
-      padding: 18px;
-      box-shadow: 0 24px 70px #0005;
-    }
-
-    .demo-video {
-      display: block;
-      width: 100%;
-      max-width: 420px;
-      height: auto;
-      aspect-ratio: 9 / 16;
-      object-fit: cover;
-      background: transparent;
-      border: none;
-      border-radius: 16px;
-      margin: 0 auto;
-    }
-
-    .trust-line {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px 18px;
-      margin-top: 20px;
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    .section { padding: 64px 0; }
-
-    .section.alt {
-      background: #0e1727;
-      border-top: 1px solid #1b2a40;
-      border-bottom: 1px solid #1b2a40;
-    }
-
-    .section-intro {
-      color: var(--muted);
-      max-width: 780px;
-      font-size: 17px;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-      margin-top: 26px;
-    }
-
-    .card, .step, .price, .contact {
-      padding: 24px;
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: 20px;
-    }
-
-    .card p, .step p, .price p {
-      color: var(--muted);
-      margin: 0;
-    }
-
-    .icon {
-      display: grid;
-      place-items: center;
-      width: 42px;
-      height: 42px;
-      border-radius: 13px;
-      background: #26364c;
-      color: var(--accent);
-      font-size: 21px;
-      margin-bottom: 17px;
-    }
-
-    .notice {
-      padding: 18px;
-      margin-top: 22px;
-      border: 1px solid #6c5932;
-      background: #292317;
-      color: #f5dfae;
-      border-radius: 15px;
-    }
-
-    .steps {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 14px;
-      margin-top: 24px;
-    }
-
-    .step-num {
-      color: var(--accent);
-      font-size: 13px;
-      font-weight: 900;
-      letter-spacing: 1px;
-      margin-bottom: 8px;
-    }
-
-    .price-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 14px;
-      margin-top: 25px;
-    }
-
-    .amount {
-      font-size: 30px;
-      font-weight: 900;
-      color: var(--accent);
-    }
-
-    .muted { color: var(--muted); }
-
-    details {
-      padding: 18px;
-      margin-bottom: 12px;
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: 15px;
-    }
-
-    summary {
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    details p {
-      color: var(--muted);
-      margin: 12px 0 0;
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
-      margin-top: 24px;
-    }
-
-    footer {
-      border-top: 1px solid var(--line);
-      padding: 30px 0;
-      color: var(--muted);
-    }
-
-    .footer-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px 20px;
-      margin: 15px 0;
-    }
-
-    .small { font-size: 13px; }
-
-    .whatsapp-float {
-      position: fixed;
-      right: 18px;
-      bottom: 22px;
-      z-index: 9999;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      text-decoration: none;
-      animation: whatsappFloat 3s ease-in-out infinite;
-    }
-
-    .whatsapp-circle {
-      width: 64px;
-      height: 64px;
-      flex: 0 0 64px;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      background: #25D366;
-      color: #fff;
-      border: 3px solid #d8ffea;
-      box-shadow: 0 6px 24px rgba(0,0,0,.4);
-    }
-
-    .whatsapp-circle svg {
-      width: 34px;
-      height: 34px;
-      fill: currentColor;
-    }
-
-    .whatsapp-label {
-      background: #159b66;
-      color: #fff;
-      padding: 8px 13px;
-      border-radius: 14px;
-      font-weight: 800;
-      font-size: 14px;
-      line-height: 1.2;
-      box-shadow: 0 5px 20px rgba(0,0,0,.3);
-    }
-
-    .whatsapp-label small {
-      display: block;
-      font-size: 12px;
-      font-weight: 500;
-      margin-top: 3px;
-    }
-
-    @keyframes whatsappFloat {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-8px); }
-    }
-
-    .whatsapp-float:hover {
-      animation-play-state: paused;
-      transform: translateY(-3px);
-    }
-
-    @media (max-width: 850px) {
-      .hero-grid { grid-template-columns: 1fr; }
-
-      .hero-art {
-        max-width: 430px;
-        width: 100%;
-        margin: auto;
-      }
-
-      .cards { grid-template-columns: repeat(2, 1fr); }
-      .price-grid { grid-template-columns: repeat(2, 1fr); }
-    }
-
-    @media (max-width: 560px) {
-      .nav {
-        align-items: flex-start;
-        flex-direction: column;
-      }
-
-      .hero { padding: 42px 0; }
-
-      .cards, .price-grid, .steps, .contact-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .section { padding: 44px 0; }
-
-      .actions .btn { width: 100%; }
-
-      .hero-art { padding: 12px; }
-
-      .whatsapp-float {
-        right: 12px;
-        bottom: 18px;
-        gap: 8px;
-      }
-
-      .whatsapp-circle {
-        width: 58px;
-        height: 58px;
-        flex-basis: 58px;
-      }
-
-      .whatsapp-label {
-        font-size: 13px;
-        padding: 7px 10px;
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .whatsapp-float { animation: none; }
-    }
-  </style>
+  .cards { grid-template-columns: repeat(2, 1fr); }
+  .price-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 560px) {
+  .nav {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .hero { padding: 42px 0; }
+
+  .cards, .price-grid, .steps, .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section { padding: 44px 0; }
+  .actions .btn { width: 100%; }
+  .hero-art { padding: 12px; }
+
+  .whatsapp-float {
+    right: 12px;
+    bottom: 18px;
+    gap: 8px;
+  }
+
+  .whatsapp-circle {
+    width: 58px;
+    height: 58px;
+    flex-basis: 58px;
+  }
+
+  .whatsapp-label {
+    font-size: 13px;
+    padding: 7px 10px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .whatsapp-float { animation: none; }
+}
+</style>
 </head>
 
 <body>
@@ -492,132 +485,20 @@
 
 <main>
 
-  <section class="hero" id="home">
-    <div class="wrap hero-grid">
+<section class="hero" id="home">
+  <div class="wrap hero-grid">
 
-      <div>
-        <div class="eyebrow">ANDROID APP · RIDE FILTER</div>
+    <div>
+      <div class="eyebrow">ANDROID APP · RIDE FILTER</div>
 
-        <h1>अपनी पसंद की राइड चुनें।</h1>
+      <h1>अपनी पसंद की राइड चुनें।</h1>
 
-        <p class="lead">
-          Ride Filter एक Android ऐप है, जिसे pickup distance
-          और trip distance जैसी सेटिंग्स के आधार पर राइड
-          फ़िल्टर करने में मदद के लिए बनाया गया है।
-          उपलब्ध सुविधाएँ आपके फोन, अनुमतियों और संबंधित
-          ड्राइवर ऐप पर निर्भर कर सकती हैं।
-        </p>
-
-        <div class="actions">
-          <a class="btn primary"
-             href="https://github.com/ride-filter-app/RideFilter/releases/download/v2.1/Ride.Filter.apk">
-            ⬇ Download APK
-          </a>
-
-          <a class="btn secondary" href="#features">
-            फीचर्स देखें
-          </a>
-
-          <a class="btn secondary"
-             href="https://chat.whatsapp.com/KxoLq2fBCbl5OqmsDmIwgU?s=cl&amp;p=a&amp;mlu=4&amp;ilr=4"
-             target="_blank"
-             rel="noopener noreferrer">
-            WhatsApp Updates
-          </a>
-        </div>
-
-        <div class="trust-line">
-          <span>✓ Android APK</span>
-          <span>✓ दूरी के फ़िल्टर</span>
-          <span>✓ इंस्टॉल गाइड</span>
-        </div>
-      </div>
-
-      <div class="hero-art" id="demo" aria-label="Ride Filter वीडियो डेमो">
-        <video class="demo-video"
-       autoplay
-       muted
-       loop
-       playsinline
-       preload="metadata">
-          <source src="/ridefilter-demo.mp4" type="video/mp4">
-          आपका ब्राउज़र वीडियो चलाने में सक्षम नहीं है।
-        </video>
-
-        <p class="small muted" style="text-align:center;margin:12px 0 0">
-          Ride Filter का आधिकारिक वीडियो डेमो।
-        </p>
-      </div>
-
-    </div>
-  </section>
-
-  <section class="section" id="features">
-    <div class="wrap">
-      <div class="eyebrow">FEATURES</div>
-      <h2>Ride Filter के फीचर्स</h2>
-
-      <p class="section-intro">
-        राइड की दूरी से जुड़ी सेटिंग्स को समझें और ऐप में
-        उपलब्ध विकल्पों का उपयोग करें।
-      </p>
-
-      <div class="cards">
-
-        <article class="card">
-          <div class="icon">⌖</div>
-          <h3>Pickup Distance Filter</h3>
-          <p>पिकअप तक की दूरी के आधार पर राइड फ़िल्टर करने के लिए अपनी सीमा सेट करें।</p>
-        </article>
-
-        <article class="card">
-          <div class="icon">↔</div>
-          <h3>Trip Distance</h3>
-          <p>ट्रिप की न्यूनतम और अधिकतम दूरी से संबंधित उपलब्ध सेटिंग्स का उपयोग करें।</p>
-        </article>
-
-        <article class="card">
-          <div class="icon">▶</div>
-          <h3>Auto Accept</h3>
-          <p>ऐप में उपलब्ध Auto Accept सुविधा का उपयोग करें। कार्रवाई के समय राइड की जानकारी जाँचते रहें।</p>
-        </article>
-
-        <article class="card">
-          <div class="icon">▤</div>
-          <h3>Ride Status</h3>
-          <p>ऐप के संस्करण में उपलब्ध राइड स्थिति और संबंधित रिकॉर्ड देखें।</p>
-        </article>
-
-        <article class="card">
-          <div class="icon">✓</div>
-          <h3>Ride Records</h3>
-          <p>उपलब्ध स्थिति या रिकॉर्ड विकल्पों से अपनी गतिविधि की जानकारी देखें।</p>
-        </article>
-
-        <article class="card">
-          <div class="icon">◷</div>
-          <h3>Reject Delay</h3>
-          <p>यदि आपके ऐप संस्करण में यह विकल्प उपलब्ध है, तो कार्रवाई से पहले देरी का समय सेट करें।</p>
-        </article>
-
-      </div>
-
-      <div class="notice">
-        <strong>महत्वपूर्ण:</strong>
-        Ride Filter राइड, स्वीकृति या कमाई की गारंटी नहीं देता।
-        संबंधित ड्राइवर ऐप के नियमों का पालन करें।
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="download">
-    <div class="wrap">
-      <div class="eyebrow">DOWNLOAD</div>
-      <h2>Android APK डाउनलोड करें</h2>
-
-      <p class="section-intro">
-        डाउनलोड करने से पहले सुनिश्चित करें कि फ़ाइल
-        आधिकारिक Ride Filter GitHub रिलीज़ से है।
+      <p class="lead">
+        Ride Filter एक Android ऐप है, जिसे pickup distance
+        और trip distance जैसी सेटिंग्स के आधार पर राइड
+        फ़िल्टर करने में मदद के लिए बनाया गया है।
+        उपलब्ध सुविधाएँ आपके फोन, अनुमतियों और संबंधित
+        ड्राइवर ऐप पर निर्भर कर सकती हैं।
       </p>
 
       <div class="actions">
@@ -626,233 +507,410 @@
           ⬇ Download APK
         </a>
 
+        <a class="btn secondary" href="#features">
+          फीचर्स देखें
+        </a>
+
         <a class="btn secondary"
            href="https://chat.whatsapp.com/KxoLq2fBCbl5OqmsDmIwgU?s=cl&amp;p=a&amp;mlu=4&amp;ilr=4"
            target="_blank"
            rel="noopener noreferrer">
-          WhatsApp Updates ग्रुप
+          WhatsApp Updates
         </a>
       </div>
 
-      <div class="notice">
-        Android सुरक्षा चेतावनी दिखे तो उसे ध्यान से पढ़ें
-        और डाउनलोड के स्रोत की पुष्टि करें। अनजान APK इंस्टॉल
-        न करें और सुरक्षा सुविधाएँ बंद न करें।
+      <div class="trust-line">
+        <span>✓ Android APK</span>
+        <span>✓ दूरी के फ़िल्टर</span>
+        <span>✓ इंस्टॉल गाइड</span>
       </div>
     </div>
-  </section>
 
-  <section class="section alt" id="install">
-    <div class="wrap">
-      <div class="eyebrow">INSTALLATION GUIDE</div>
-      <h2>फोन में ऐप इंस्टॉल कैसे करें?</h2>
+    <div class="hero-art" id="demo" aria-label="Ride Filter वीडियो डेमो">
+      <video class="demo-video"
+             autoplay
+             muted
+             loop
+             playsinline
+             preload="metadata">
+        <source src="/ridefilter-demo.mp4" type="video/mp4">
+        आपका ब्राउज़र वीडियो चलाने में सक्षम नहीं है।
+      </video>
 
-      <div class="steps">
-
-        <div class="step">
-          <div class="step-num">STEP 01</div>
-          <h3>APK डाउनलोड करें</h3>
-          <p>डाउनलोड बटन दबाएँ और फ़ाइल डाउनलोड होने तक प्रतीक्षा करें।</p>
-        </div>
-
-        <div class="step">
-          <div class="step-num">STEP 02</div>
-          <h3>डाउनलोड की फ़ाइल खोलें</h3>
-          <p>Files / My Files या ब्राउज़र के Downloads सेक्शन में जाकर APK खोलें।</p>
-        </div>
-
-        <div class="step">
-          <div class="step-num">STEP 03</div>
-          <h3>स्रोत की अनुमति</h3>
-          <p>Android अनुमति माँगे तो केवल उसी ऐप/ब्राउज़र के लिए अनुमति दें जिससे फ़ाइल डाउनलोड की है, और स्रोत की पुष्टि के बाद ही आगे बढ़ें।</p>
-        </div>
-
-        <div class="step">
-          <div class="step-num">STEP 04</div>
-          <h3>इंस्टॉल करें</h3>
-          <p>स्क्रीन पर दिए निर्देशों का पालन करें। इंस्टॉल होने के बाद ऐप खोलें।</p>
-        </div>
-
-      </div>
-
-      <h3 style="margin-top:28px">Accessibility और बैटरी सेटिंग</h3>
-
-      <p class="muted">
-        यदि किसी सुविधा के लिए Accessibility अनुमति आवश्यक हो,
-        तो उसे चालू करने से पहले Android का विवरण ध्यान से पढ़ें।
-        कुछ फोन बैटरी बचाने के लिए बैकग्राउंड ऐप रोक सकते हैं;
-        बैटरी उपयोग बढ़ने की संभावना को ध्यान में रखें।
+      <p class="small muted" style="text-align:center;margin:12px 0 0">
+        Ride Filter का आधिकारिक वीडियो डेमो।
       </p>
     </div>
-  </section>
 
-  <section class="section" id="plans">
-    <div class="wrap">
-      <div class="eyebrow">PASSES</div>
-      <h2>पास और कीमतें</h2>
+  </div>
+</section>
 
-      <p class="section-intro">
-        खरीदने से पहले ऐप के Account / Pass सेक्शन में
-        वर्तमान कीमत और अवधि की पुष्टि करें।
+<section class="section" id="features">
+  <div class="wrap">
+    <div class="eyebrow">FEATURES</div>
+    <h2>Ride Filter के फीचर्स</h2>
+
+    <p class="section-intro">
+      राइड की दूरी से जुड़ी सेटिंग्स को समझें और ऐप में
+      उपलब्ध विकल्पों का उपयोग करें।
+    </p>
+
+    <div class="cards">
+
+      <article class="card">
+        <div class="icon">⌖</div>
+        <h3>Pickup Distance Filter</h3>
+        <p>पिकअप तक की दूरी के आधार पर राइड फ़िल्टर करने के लिए अपनी सीमा सेट करें।</p>
+      </article>
+
+      <article class="card">
+        <div class="icon">↔</div>
+        <h3>Trip Distance</h3>
+        <p>ट्रिप की न्यूनतम और अधिकतम दूरी से संबंधित उपलब्ध सेटिंग्स का उपयोग करें।</p>
+      </article>
+
+      <article class="card">
+        <div class="icon">▶</div>
+        <h3>Auto Accept</h3>
+        <p>ऐप में उपलब्ध Auto Accept सुविधा का उपयोग करें। कार्रवाई के समय राइड की जानकारी जाँचते रहें।</p>
+      </article>
+
+      <article class="card">
+        <div class="icon">▤</div>
+        <h3>Ride Status</h3>
+        <p>ऐप के संस्करण में उपलब्ध राइड स्थिति और संबंधित रिकॉर्ड देखें।</p>
+      </article>
+
+      <article class="card">
+        <div class="icon">✓</div>
+        <h3>Ride Records</h3>
+        <p>उपलब्ध स्थिति या रिकॉर्ड विकल्पों से अपनी गतिविधि की जानकारी देखें।</p>
+      </article>
+
+      <article class="card">
+        <div class="icon">◷</div>
+        <h3>Reject Delay</h3>
+        <p>यदि आपके ऐप संस्करण में यह विकल्प उपलब्ध है, तो कार्रवाई से पहले देरी का समय सेट करें।</p>
+      </article>
+
+    </div>
+
+    <div class="notice">
+      <strong>महत्वपूर्ण:</strong>
+      Ride Filter राइड, स्वीकृति या कमाई की गारंटी नहीं देता।
+      संबंधित ड्राइवर ऐप के नियमों का पालन करें।
+    </div>
+  </div>
+</section>
+
+<!-- SEO INFORMATION SECTION -->
+<section class="section alt" id="about-ride-filter">
+  <div class="wrap">
+    <div class="eyebrow">ABOUT RIDE FILTER</div>
+
+    <h2>Rapido Drivers के लिए Ride Filter App</h2>
+
+    <p class="section-intro">
+      Ride Filter एक Android Ride Filter App है, जिसे
+      ड्राइवरों को अपनी राइड चुनने में अधिक नियंत्रण देने
+      के उद्देश्य से बनाया गया है। यह ऐप Pickup Distance
+      Filter और Trip Distance Settings के माध्यम से
+      राइड फ़िल्टर करने में मदद करता है।
+    </p>
+
+    <h3 style="margin-top:24px">Ride Filter APK Download</h3>
+
+    <p class="muted">
+      आप आधिकारिक वेबसाइट से Ride Filter APK डाउनलोड
+      करके अपने Android फोन में इंस्टॉल कर सकते हैं।
+      वेबसाइट पर दिए गए Installation Guide को पढ़कर
+      ऐप की उपलब्ध सुविधाओं और आवश्यक अनुमतियों को समझें।
+    </p>
+
+    <h3 style="margin-top:20px">
+      Rapido Ride Filter और Auto Accept Features
+    </h3>
+
+    <p class="muted">
+      Ride Filter में Pickup Distance Filter, Trip
+      Distance Filter और उपलब्ध Auto Accept जैसी
+      सुविधाएँ शामिल हैं। इनका काम करना फोन के Android
+      वर्ज़न, आवश्यक अनुमतियों और संबंधित ड्राइवर ऐप पर
+      निर्भर कर सकता है।
+    </p>
+
+    <p class="small muted">
+      Ride Filter एक स्वतंत्र ऐप है। यह Rapido का
+      आधिकारिक या संबद्ध उत्पाद नहीं है।
+    </p>
+  </div>
+</section>
+
+<section class="section" id="download">
+  <div class="wrap">
+    <div class="eyebrow">DOWNLOAD</div>
+    <h2>Android APK डाउनलोड करें</h2>
+
+    <p class="section-intro">
+      डाउनलोड करने से पहले सुनिश्चित करें कि फ़ाइल
+      आधिकारिक Ride Filter GitHub रिलीज़ से है।
+    </p>
+
+    <div class="actions">
+      <a class="btn primary"
+         href="https://github.com/ride-filter-app/RideFilter/releases/download/v2.1/Ride.Filter.apk">
+        ⬇ Download APK
+      </a>
+
+      <a class="btn secondary"
+         href="https://chat.whatsapp.com/KxoLq2fBCbl5OqmsDmIwgU?s=cl&amp;p=a&amp;mlu=4&amp;ilr=4"
+         target="_blank"
+         rel="noopener noreferrer">
+        WhatsApp Updates ग्रुप
+      </a>
+    </div>
+
+    <div class="notice">
+      Android सुरक्षा चेतावनी दिखे तो उसे ध्यान से पढ़ें
+      और डाउनलोड के स्रोत की पुष्टि करें। अनजान APK इंस्टॉल
+      न करें और सुरक्षा सुविधाएँ बंद न करें।
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="install">
+  <div class="wrap">
+    <div class="eyebrow">INSTALLATION GUIDE</div>
+    <h2>फोन में ऐप इंस्टॉल कैसे करें?</h2>
+
+    <div class="steps">
+
+      <div class="step">
+        <div class="step-num">STEP 01</div>
+        <h3>APK डाउनलोड करें</h3>
+        <p>डाउनलोड बटन दबाएँ और फ़ाइल डाउनलोड होने तक प्रतीक्षा करें।</p>
+      </div>
+
+      <div class="step">
+        <div class="step-num">STEP 02</div>
+        <h3>डाउनलोड की फ़ाइल खोलें</h3>
+        <p>Files / My Files या ब्राउज़र के Downloads सेक्शन में जाकर APK खोलें।</p>
+      </div>
+
+      <div class="step">
+        <div class="step-num">STEP 03</div>
+        <h3>स्रोत की अनुमति</h3>
+        <p>Android अनुमति माँगे तो केवल उसी ऐप/ब्राउज़र के लिए अनुमति दें जिससे फ़ाइल डाउनलोड की है, और स्रोत की पुष्टि के बाद ही आगे बढ़ें।</p>
+      </div>
+
+      <div class="step">
+        <div class="step-num">STEP 04</div>
+        <h3>इंस्टॉल करें</h3>
+        <p>स्क्रीन पर दिए निर्देशों का पालन करें। इंस्टॉल होने के बाद ऐप खोलें।</p>
+      </div>
+
+    </div>
+
+    <h3 style="margin-top:28px">Accessibility और बैटरी सेटिंग</h3>
+
+    <p class="muted">
+      यदि किसी सुविधा के लिए Accessibility अनुमति आवश्यक हो,
+      तो उसे चालू करने से पहले Android का विवरण ध्यान से पढ़ें।
+      कुछ फोन बैटरी बचाने के लिए बैकग्राउंड ऐप रोक सकते हैं;
+      बैटरी उपयोग बढ़ने की संभावना को ध्यान में रखें।
+    </p>
+  </div>
+</section>
+
+<section class="section" id="plans">
+  <div class="wrap">
+    <div class="eyebrow">PASSES</div>
+    <h2>पास और कीमतें</h2>
+
+    <p class="section-intro">
+      खरीदने से पहले ऐप के Account / Pass सेक्शन में
+      वर्तमान कीमत और अवधि की पुष्टि करें।
+    </p>
+
+    <div class="price-grid">
+
+      <article class="price">
+        <h3>1 दिन</h3>
+        <div class="amount">₹10</div>
+        <p>एक दिन का पास</p>
+      </article>
+
+      <article class="price">
+        <h3>3 दिन</h3>
+        <div class="amount">₹25</div>
+        <p>तीन दिन का पास</p>
+      </article>
+
+      <article class="price">
+        <h3>1 सप्ताह</h3>
+        <div class="amount">₹50</div>
+        <p>सात दिन का पास</p>
+      </article>
+
+      <article class="price">
+        <h3>1 महीना</h3>
+        <div class="amount">₹200</div>
+        <p>एक महीने का पास</p>
+      </article>
+
+    </div>
+
+    <p class="small muted" style="margin-top:16px">
+      प्रकाशित करने से पहले इन कीमतों को ऐप में मौजूद
+      मौजूदा कीमतों से मिलाएँ। पास सक्रिय होने के लिए
+      भुगतान की पुष्टि आवश्यक हो सकती है।
+    </p>
+  </div>
+</section>
+
+<section class="section alt" id="faq">
+  <div class="wrap">
+    <div class="eyebrow">HELP CENTER</div>
+    <h2>अक्सर पूछे जाने वाले सवाल</h2>
+
+    <details>
+      <summary>क्या Ride Filter हर फोन पर काम करेगा?</summary>
+      <p>जरूरी नहीं। यह Android वर्ज़न, डिवाइस, अनुमतियों और संबंधित ड्राइवर ऐप पर निर्भर हो सकता है।</p>
+    </details>
+
+    <details>
+      <summary>क्या ऐप कमाई की गारंटी देता है?</summary>
+      <p>नहीं। ऐप राइड फ़िल्टर करने में मदद के लिए है। राइड, स्वीकृति या कमाई की गारंटी नहीं दी जाती।</p>
+    </details>
+
+    <details>
+      <summary>Accessibility अनुमति क्यों चाहिए?</summary>
+      <p>कुछ सुविधाओं के लिए Android की Accessibility सेवा आवश्यक हो सकती है। अनुमति देने से पहले उसका विवरण और संभावित पहुँच ध्यान से समझें।</p>
+    </details>
+
+    <details>
+      <summary>पेमेंट के बाद पास सक्रिय न हो तो?</summary>
+      <p>ऐप में पास की स्थिति दोबारा जाँचें। समस्या बनी रहे तो भुगतान की तारीख, राशि और Order ID के साथ सपोर्ट से संपर्क करें। अपना OTP या UPI PIN साझा न करें।</p>
+    </details>
+
+    <details>
+      <summary>APK डाउनलोड नहीं हो रही है।</summary>
+      <p>इंटरनेट कनेक्शन जाँचें और पुष्टि करें कि GitHub Release में APK फ़ाइल मौजूद है।</p>
+    </details>
+
+    <!-- NEW SEO FAQS -->
+
+    <details>
+      <summary>Ride Filter App क्या है?</summary>
+      <p>Ride Filter एक Android ऐप है जो Pickup Distance और Trip Distance जैसी सेटिंग्स के आधार पर राइड फ़िल्टर करने में मदद करता है।</p>
+    </details>
+
+    <details>
+      <summary>Ride Filter APK कहाँ से डाउनलोड करें?</summary>
+      <p>आप Ride Filter की आधिकारिक वेबसाइट ridefilter.in पर जाकर Download APK बटन से ऐप डाउनलोड कर सकते हैं।</p>
+    </details>
+
+    <details>
+      <summary>क्या Ride Filter में Rapido Auto Accept सुविधा है?</summary>
+      <p>ऐप में Auto Accept सुविधा उपलब्ध है। इसका काम करना फोन, अनुमतियों और संबंधित ड्राइवर ऐप पर निर्भर कर सकता है।</p>
+    </details>
+
+  </div>
+</section>
+
+<section class="section" id="privacy">
+  <div class="wrap">
+    <div class="eyebrow">PRIVACY</div>
+    <h2>Privacy Policy</h2>
+
+    <div class="card">
+      <p>ऐप के वास्तविक व्यवहार के अनुसार लॉगिन जानकारी, पास और भुगतान स्थिति, सेटिंग्स तथा राइड स्थिति से संबंधित रिकॉर्ड प्रोसेस हो सकते हैं।</p>
+
+      <p>यदि Accessibility सेवा चालू की जाती है, तो वह Android द्वारा उपलब्ध कराई गई स्क्रीन सामग्री और इंटरैक्शन तक पहुँच सकती है। अनुमति देने से पहले Android द्वारा दिखाया गया विवरण पढ़ें।</p>
+
+      <p>भुगतान की प्रक्रिया में संबंधित भुगतान प्रदाता की नीतियाँ भी लागू हो सकती हैं।</p>
+
+      <p>
+        गोपनीयता संबंधी सवाल:
+        <a href="mailto:ridefiltersupport@gmail.com">ridefiltersupport@gmail.com</a>
       </p>
 
-      <div class="price-grid">
-
-        <article class="price">
-          <h3>1 दिन</h3>
-          <div class="amount">₹10</div>
-          <p>एक दिन का पास</p>
-        </article>
-
-        <article class="price">
-          <h3>3 दिन</h3>
-          <div class="amount">₹25</div>
-          <p>तीन दिन का पास</p>
-        </article>
-
-        <article class="price">
-          <h3>1 सप्ताह</h3>
-          <div class="amount">₹50</div>
-          <p>सात दिन का पास</p>
-        </article>
-
-        <article class="price">
-          <h3>1 महीना</h3>
-          <div class="amount">₹200</div>
-          <p>एक महीने का पास</p>
-        </article>
-
-      </div>
-
-      <p class="small muted" style="margin-top:16px">
-        प्रकाशित करने से पहले इन कीमतों को ऐप में मौजूद
-        मौजूदा कीमतों से मिलाएँ। पास सक्रिय होने के लिए
-        भुगतान की पुष्टि आवश्यक हो सकती है।
+      <p class="small muted">
+        प्रकाशित करने से पहले इस नीति को अपने वास्तविक ऐप के डेटा उपयोग के अनुसार जाँचकर अंतिम रूप दें।
       </p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="section alt" id="faq">
-    <div class="wrap">
-      <div class="eyebrow">HELP CENTER</div>
-      <h2>अक्सर पूछे जाने वाले सवाल</h2>
+<section class="section alt" id="terms">
+  <div class="wrap">
+    <div class="eyebrow">TERMS</div>
+    <h2>Terms &amp; Conditions</h2>
 
-      <details>
-        <summary>क्या Ride Filter हर फोन पर काम करेगा?</summary>
-        <p>जरूरी नहीं। यह Android वर्ज़न, डिवाइस, अनुमतियों और संबंधित ड्राइवर ऐप पर निर्भर हो सकता है।</p>
-      </details>
+    <div class="card">
+      <p>Ride Filter का उपयोग करते समय लागू कानूनों, Android की शर्तों और संबंधित ड्राइवर प्लेटफ़ॉर्म के नियमों का पालन करें।</p>
 
-      <details>
-        <summary>क्या ऐप कमाई की गारंटी देता है?</summary>
-        <p>नहीं। ऐप राइड फ़िल्टर करने में मदद के लिए है। राइड, स्वीकृति या कमाई की गारंटी नहीं दी जाती।</p>
-      </details>
+      <p>ऐप की उपलब्धता डिवाइस, नेटवर्क, अनुमतियों और तीसरे पक्ष के बदलावों पर निर्भर हो सकती है। किसी राइड, स्वीकृति या कमाई की गारंटी नहीं है।</p>
 
-      <details>
-        <summary>Accessibility अनुमति क्यों चाहिए?</summary>
-        <p>कुछ सुविधाओं के लिए Android की Accessibility सेवा आवश्यक हो सकती है। अनुमति देने से पहले उसका विवरण और संभावित पहुँच ध्यान से समझें।</p>
-      </details>
+      <p>Ride Filter किसी तीसरे पक्ष के ड्राइवर प्लेटफ़ॉर्म का आधिकारिक उत्पाद होने का दावा नहीं करता।</p>
 
-      <details>
-        <summary>पेमेंट के बाद पास सक्रिय न हो तो?</summary>
-        <p>ऐप में पास की स्थिति दोबारा जाँचें। समस्या बनी रहे तो भुगतान की तारीख, राशि और Order ID के साथ सपोर्ट से संपर्क करें। अपना OTP या UPI PIN साझा न करें।</p>
-      </details>
-
-      <details>
-        <summary>APK डाउनलोड नहीं हो रही है।</summary>
-        <p>इंटरनेट कनेक्शन जाँचें और पुष्टि करें कि GitHub Release में APK फ़ाइल मौजूद है।</p>
-      </details>
+      <p>
+        सहायता:
+        <a href="mailto:ridefiltersupport@gmail.com">ridefiltersupport@gmail.com</a>
+      </p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="section" id="privacy">
-    <div class="wrap">
-      <div class="eyebrow">PRIVACY</div>
-      <h2>Privacy Policy</h2>
+<section class="section" id="refund">
+  <div class="wrap">
+    <div class="eyebrow">REFUNDS</div>
+    <h2>Refund Policy</h2>
 
-      <div class="card">
-        <p>ऐप के वास्तविक व्यवहार के अनुसार लॉगिन जानकारी, पास और भुगतान स्थिति, सेटिंग्स तथा राइड स्थिति से संबंधित रिकॉर्ड प्रोसेस हो सकते हैं।</p>
+    <div class="card">
+      <p>यदि भुगतान कट गया लेकिन पास सक्रिय नहीं हुआ, तो पहले ऐप में पास की स्थिति जाँचें और फिर सपोर्ट से संपर्क करें।</p>
 
-        <p>यदि Accessibility सेवा चालू की जाती है, तो वह Android द्वारा उपलब्ध कराई गई स्क्रीन सामग्री और इंटरैक्शन तक पहुँच सकती है। अनुमति देने से पहले Android द्वारा दिखाया गया विवरण पढ़ें।</p>
+      <p>गलत या डुप्लिकेट भुगतान और असफल ऑर्डर की जाँच उपलब्ध भुगतान विवरण के आधार पर की जाएगी। रिफंड की पात्रता लागू नियमों और मामले की जाँच पर निर्भर करेगी।</p>
 
-        <p>भुगतान की प्रक्रिया में संबंधित भुगतान प्रदाता की नीतियाँ भी लागू हो सकती हैं।</p>
+      <p>
+        संपर्क:
+        <a href="mailto:ridefiltersupport@gmail.com">ridefiltersupport@gmail.com</a>
+      </p>
 
-        <p>
-          गोपनीयता संबंधी सवाल:
-          <a href="mailto:ridefiltersupport@gmail.com">ridefiltersupport@gmail.com</a>
-        </p>
+      <p class="small muted">
+        प्रकाशित करने से पहले इस नीति को अपनी वास्तविक रिफंड शर्तों के अनुसार जाँच लें।
+      </p>
+    </div>
+  </div>
+</section>
 
-        <p class="small muted">प्रकाशित करने से पहले इस नीति को अपने वास्तविक ऐप के डेटा उपयोग के अनुसार जाँचकर अंतिम रूप दें।</p>
+<section class="section alt" id="contact">
+  <div class="wrap">
+    <div class="eyebrow">CONTACT &amp; SUPPORT</div>
+    <h2>हमसे संपर्क करें</h2>
+
+    <div class="contact-grid">
+
+      <div class="contact">
+        <h3>ईमेल सपोर्ट</h3>
+        <p class="muted">ऐप इंस्टॉल, पास या पेमेंट की समस्या के लिए ईमेल करें।</p>
+        <a class="btn primary" href="mailto:ridefiltersupport@gmail.com">ईमेल सपोर्ट</a>
       </div>
-    </div>
-  </section>
 
-  <section class="section alt" id="terms">
-    <div class="wrap">
-      <div class="eyebrow">TERMS</div>
-      <h2>Terms &amp; Conditions</h2>
-
-      <div class="card">
-        <p>Ride Filter का उपयोग करते समय लागू कानूनों, Android की शर्तों और संबंधित ड्राइवर प्लेटफ़ॉर्म के नियमों का पालन करें।</p>
-
-        <p>ऐप की उपलब्धता डिवाइस, नेटवर्क, अनुमतियों और तीसरे पक्ष के बदलावों पर निर्भर हो सकती है। किसी राइड, स्वीकृति या कमाई की गारंटी नहीं है।</p>
-
-        <p>Ride Filter किसी तीसरे पक्ष के ड्राइवर प्लेटफ़ॉर्म का आधिकारिक उत्पाद होने का दावा नहीं करता।</p>
-
-        <p>
-          सहायता:
-          <a href="mailto:ridefiltersupport@gmail.com">ridefiltersupport@gmail.com</a>
-        </p>
+      <div class="contact">
+        <h3>WhatsApp Updates</h3>
+        <p class="muted">ऐप के अपडेट और घोषणाओं के लिए आधिकारिक ग्रुप में जुड़ें।</p>
+        <a class="btn secondary"
+           href="https://chat.whatsapp.com/KxoLq2fBCbl5OqmsDmIwgU?s=cl&amp;p=a&amp;mlu=4&amp;ilr=4"
+           target="_blank"
+           rel="noopener noreferrer">
+          ग्रुप जॉइन करें
+        </a>
       </div>
+
     </div>
-  </section>
-
-  <section class="section" id="refund">
-    <div class="wrap">
-      <div class="eyebrow">REFUNDS</div>
-      <h2>Refund Policy</h2>
-
-      <div class="card">
-        <p>यदि भुगतान कट गया लेकिन पास सक्रिय नहीं हुआ, तो पहले ऐप में पास की स्थिति जाँचें और फिर सपोर्ट से संपर्क करें।</p>
-
-        <p>गलत या डुप्लिकेट भुगतान और असफल ऑर्डर की जाँच उपलब्ध भुगतान विवरण के आधार पर की जाएगी। रिफंड की पात्रता लागू नियमों और मामले की जाँच पर निर्भर करेगी।</p>
-
-        <p>
-          संपर्क:
-          <a href="mailto:ridefiltersupport@gmail.com">ridefiltersupport@gmail.com</a>
-        </p>
-
-        <p class="small muted">प्रकाशित करने से पहले इस नीति को अपनी वास्तविक रिफंड शर्तों के अनुसार जाँच लें।</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section alt" id="contact">
-    <div class="wrap">
-      <div class="eyebrow">CONTACT &amp; SUPPORT</div>
-      <h2>हमसे संपर्क करें</h2>
-
-      <div class="contact-grid">
-
-        <div class="contact">
-          <h3>ईमेल सपोर्ट</h3>
-          <p class="muted">ऐप इंस्टॉल, पास या पेमेंट की समस्या के लिए ईमेल करें।</p>
-          <a class="btn primary" href="mailto:ridefiltersupport@gmail.com">ईमेल सपोर्ट</a>
-        </div>
-
-        <div class="contact">
-          <h3>WhatsApp Updates</h3>
-          <p class="muted">ऐप के अपडेट और घोषणाओं के लिए आधिकारिक ग्रुप में जुड़ें।</p>
-          <a class="btn secondary"
-             href="https://chat.whatsapp.com/KxoLq2fBCbl5OqmsDmIwgU?s=cl&amp;p=a&amp;mlu=4&amp;ilr=4"
-             target="_blank"
-             rel="noopener noreferrer">
-            ग्रुप जॉइन करें
-          </a>
-        </div>
-
-      </div>
-    </div>
-  </section>
+  </div>
+</section>
 
 </main>
 
