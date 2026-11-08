@@ -218,7 +218,7 @@ p { margin: 0 0 14px; }
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  margin-top: 26px;
+  margin-top: 20px;
 }
 
 .btn {
@@ -242,6 +242,34 @@ p { margin: 0 0 14px; }
 .secondary {
   color: var(--text);
   background: rgba(255,255,255,.03);
+}
+
+.download-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 9px;
+  margin-top: 26px;
+}
+
+.download-btn {
+  min-height: 60px;
+  padding: 16px 30px;
+  font-size: 19px;
+  font-weight: 900;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(215,255,100,.20);
+  transition: transform .2s, box-shadow .2s;
+}
+
+.download-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(215,255,100,.30);
+}
+
+.version-note {
+  color: var(--muted);
+  font-size: 13px;
 }
 
 .hero-art {
@@ -483,7 +511,12 @@ footer {
   }
 
   .section { padding: 44px 0; }
-  .actions .btn { width: 100%; }
+
+  .actions .btn,
+  .download-btn {
+    width: 100%;
+  }
+
   .hero-art { padding: 12px; }
 
   .whatsapp-float {
@@ -550,15 +583,22 @@ footer {
         ड्राइवर ऐप पर निर्भर कर सकती हैं।
       </p>
 
-      <a class="btn primary"
-   href="https://github.com/ride-filter-app/RideFilter/releases/download/v2.1/Ride.Filter.apk"
-   onclick="gtag('event', 'download_apk', {
-     'event_category': 'APK Download',
-     'event_label': 'Ride Filter APK'
-   })">
-  ⬇ Download APK
-</a>
+      <div class="download-cta">
+        <a class="btn primary download-btn"
+           href="https://github.com/ride-filter-app/RideFilter/releases/download/v2.1/Ride.Filter.apk"
+           onclick="gtag('event', 'download_apk', {
+             'event_category': 'APK Download',
+             'event_label': 'Ride Filter APK'
+           })">
+          ⬇ Download APK
+        </a>
 
+        <span class="version-note">
+          Latest Version: 2.1 · Android APK
+        </span>
+      </div>
+
+      <div class="actions">
         <a class="btn secondary" href="#features">
           फीचर्स देखें
         </a>
@@ -655,7 +695,6 @@ footer {
   </div>
 </section>
 
-<!-- SEO INFORMATION SECTION -->
 <section class="section alt" id="about-ride-filter">
   <div class="wrap">
     <div class="eyebrow">ABOUT RIDE FILTER</div>
@@ -708,15 +747,22 @@ footer {
       आधिकारिक Ride Filter GitHub रिलीज़ से है।
     </p>
 
-    <a class="btn primary"
-   href="https://github.com/ride-filter-app/RideFilter/releases/download/v2.1/Ride.Filter.apk"
-   onclick="gtag('event', 'download_apk', {
-     'event_category': 'APK Download',
-     'event_label': 'Ride Filter APK'
-   })">
-  ⬇ Download APK
-</a>
+    <div class="download-cta">
+      <a class="btn primary download-btn"
+         href="https://github.com/ride-filter-app/RideFilter/releases/download/v2.1/Ride.Filter.apk"
+         onclick="gtag('event', 'download_apk', {
+           'event_category': 'APK Download',
+           'event_label': 'Ride Filter APK'
+         })">
+        ⬇ Download Latest APK
+      </a>
 
+      <span class="version-note">
+        Latest Version: 2.1 · Official GitHub Release
+      </span>
+    </div>
+
+    <div class="actions">
       <a class="btn secondary"
          href="https://chat.whatsapp.com/KxoLq2fBCbl5OqmsDmIwgU?s=cl&amp;p=a&amp;mlu=4&amp;ilr=4"
          target="_blank"
@@ -852,8 +898,6 @@ footer {
       <summary>APK डाउनलोड नहीं हो रही है।</summary>
       <p>इंटरनेट कनेक्शन जाँचें और पुष्टि करें कि GitHub Release में APK फ़ाइल मौजूद है।</p>
     </details>
-
-    <!-- NEW SEO FAQS -->
 
     <details>
       <summary>Ride Filter App क्या है?</summary>
