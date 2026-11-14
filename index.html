@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,17 +9,15 @@
 <!-- Google Analytics 4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-N3WW158N8M"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-N3WW158N8M');
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-N3WW158N8M');
 </script>
-<!-- End Google Analytics -->
 
 <!-- Google AdSense Verification -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5038130043915755"
-     crossorigin="anonymous"></script>
-<!-- End Google AdSense Verification -->
+crossorigin="anonymous"></script>
 
 <link rel="icon" type="image/png" href="/ride-filter-logo.png.png">
 <link rel="apple-touch-icon" href="/ride-filter-logo.png.png">
@@ -40,12 +39,12 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_IN">
 <meta property="og:title" content="Ride Filter – Bike Taxi, Auto, Cab, Taxi & Parcel Ride Filter App">
-<meta property="og:description" content="Ride Filter is an Android Ride Filter App for Bike Taxi, Auto, Cab, Taxi and Parcel Drivers in India. Filter ride requests using Pickup Distance Filter and Trip Distance Filter settings, with Auto Accept features. Download the Ride Filter APK for Android.">
+<meta property="og:description" content="Ride Filter is an Android Ride Filter App for Bike Taxi, Auto, Cab, Taxi and Parcel Drivers in India.">
 <meta property="og:url" content="https://ridefilter.in/">
 
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ride Filter – Bike Taxi, Auto, Cab, Taxi & Parcel Ride Filter App">
-<meta name="twitter:description" content="Ride Filter is an Android Ride Filter App for Bike Taxi, Auto, Cab, Taxi and Parcel Drivers in India. Filter rides using Pickup Distance, Trip Distance and Auto Accept features. Download the Android APK.">
+<meta name="twitter:description" content="Ride Filter is an Android Ride Filter App for Bike Taxi, Auto, Cab, Taxi and Parcel Drivers in India.">
 
 <script type="application/ld+json">
 {
@@ -65,7 +64,7 @@
       "name": "Ride Filter",
       "operatingSystem": "Android",
       "applicationCategory": "UtilitiesApplication",
-      "description": "Ride Filter is an Android Ride Filter App for Bike Taxi, Auto, Cab, Taxi and Parcel Drivers in India. It provides Pickup Distance Filter and Trip Distance Filter settings, with available Auto Accept features.",
+      "description": "Ride Filter is an Android Ride Filter App for Bike Taxi, Auto, Cab, Taxi and Parcel Drivers in India.",
       "url": "https://ridefilter.in/",
       "downloadUrl": "https://github.com/ride-filter-app/RideFilter/releases/download/v2.1/Ride.Filter.apk",
       "inLanguage": "en-IN",
@@ -434,6 +433,23 @@ footer {
 
 .small { font-size: 13px; }
 
+/* Advertisement Banner CSS */
+.ad-banner {
+  width: 100%;
+  max-width: 468px;
+  min-height: 60px;
+  margin: 25px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.ad-banner iframe {
+  max-width: 100%;
+  border: 0;
+}
+
 .whatsapp-float {
   position: fixed;
   right: 18px;
@@ -527,6 +543,11 @@ footer {
 
   .hero-art { padding: 12px; }
 
+  .ad-banner {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+
   .whatsapp-float {
     right: 12px;
     bottom: 18px;
@@ -608,9 +629,7 @@ footer {
       </div>
 
       <div class="actions">
-        <a class="btn secondary" href="#features">
-          Explore Features
-        </a>
+        <a class="btn secondary" href="#features">Explore Features</a>
 
         <a class="btn secondary"
            href="https://chat.whatsapp.com/KxoLq2fBCbl5OqmsDmIwgU?s=cl&amp;p=a&amp;mlu=4&amp;ilr=4"
@@ -645,6 +664,30 @@ footer {
 
   </div>
 </section>
+
+<!-- =================================== -->
+<!-- BAUVAL ADVERTISEMENT BANNER -->
+<!-- =================================== -->
+
+<div class="wrap">
+  <div class="ad-banner">
+
+    <script>
+      atOptions = {
+        'key' : '13222541f55e13c68845d97dba3697f1',
+        'format' : 'iframe',
+        'height' : 60,
+        'width' : 468,
+        'params' : {}
+      };
+    </script>
+
+    <script src="https://bauval.org/22/13222541f55e13c68845d97dba3697f1"></script>
+
+  </div>
+</div>
+
+<!-- END ADVERTISEMENT BANNER -->
 
 <section class="section" id="features">
   <div class="wrap">
@@ -1069,8 +1112,8 @@ footer {
 </a>
 
 <script>
-  document.getElementById("year").textContent =
-    new Date().getFullYear();
+document.getElementById("year").textContent =
+  new Date().getFullYear();
 </script>
 
 </body>
