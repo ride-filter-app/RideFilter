@@ -5,16 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#101923">
 
-<!-- Google Analytics 4 -->
+<!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-N3WW158N8M"></script>
 <script>
-window.dataLayer = window.dataLayer || [];
+window.dataLayer=window.dataLayer||[];
 function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-N3WW158N8M');
+gtag('js',new Date());
+gtag('config','G-N3WW158N8M');
 </script>
 
-<!-- Google AdSense Verification -->
+<!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5038130043915755" crossorigin="anonymous"></script>
 
 <link rel="icon" type="image/png" href="/ride-filter-logo.png.png">
@@ -28,7 +28,8 @@ gtag('config', 'G-N3WW158N8M');
 <meta name="robots" content="index, follow, max-image-preview:none">
 <meta http-equiv="content-language" content="en-IN">
 <meta name="application-name" content="Ride Filter">
-<meta name="keywords" content="Ride Filter, Ride Filter App, Ride Filter APK, Bike Taxi Ride Filter, Auto Ride Filter, Cab Ride Filter, Taxi Ride Filter, Parcel Ride Filter, Rapido Ride Filter, Rapido Captain Ride Filter, Pickup Distance Filter, Trip Distance Filter, Auto Accept, Ride Filter Recharge Plan, Ride Clicker, Automatic Ride Accept Auto Clicker, RideClicker, Rider Accept, RapidClick, Auto Accept Rides on Ola, Auto Accept Rides on Uber, Auto Accept Rides on Rapido, Auto Accept Rides on Porter, Never Miss A Ride, Auto Clicker, Automatic Tap, Auto Click, Automatic Clicker, Ride Auto Clicker, Ride Auto Clicker Apps, Auto Clicker APK for Android, Automatic Clicker APK for Android">
+
+<meta name="keywords" content="Ride Filter, Ride Filter App, Ride Filter APK, Bike Taxi Ride Filter, Auto Ride Filter, Cab Ride Filter, Taxi Ride Filter, Parcel Ride Filter, Rapido Ride Filter, Rapido Captain Ride Filter, Pickup Distance Filter, Trip Distance Filter, Auto Accept, Ride Clicker, Auto Accept Rides on Ola, Auto Accept Rides on Uber, Auto Accept Rides on Rapido, Auto Clicker APK for Android">
 
 <link rel="canonical" href="https://ridefilter.in/">
 
@@ -41,7 +42,7 @@ gtag('config', 'G-N3WW158N8M');
 
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ride Filter – Bike Taxi, Auto, Cab, Taxi & Parcel Ride Filter App">
-<meta name="twitter:description" content="Ride Filter is an Android Ride Filter App for Bike Taxi, Auto, Cab, Taxi and Parcel Drivers in India.">
+<meta name="twitter:description" content="Ride Filter is an Android Ride Filter App for drivers in India.">
 
 <script type="application/ld+json">
 {
@@ -83,7 +84,7 @@ gtag('config', 'G-N3WW158N8M');
 </script>
 
 <style>
-:root {
+:root{
 --bg:#0b1220;
 --panel:#121d31;
 --text:#f5f7fb;
@@ -107,15 +108,8 @@ font-family:Arial,"Noto Sans Devanagari",sans-serif;
 line-height:1.7;
 }
 
-a{
-color:var(--accent);
-text-decoration:none;
-}
-
-a:focus-visible{
-outline:3px solid var(--accent);
-outline-offset:3px;
-}
+a{color:var(--accent);text-decoration:none}
+a:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
 
 .wrap{
 width:min(1120px,calc(100% - 32px));
@@ -171,7 +165,7 @@ font-size:13px;
 nav a:hover{color:var(--accent)}
 
 .hero{
-padding:60px 0 58px;
+padding:48px 0 58px;
 background:
 radial-gradient(ellipse at 85% 15%,rgba(215,255,100,.12),transparent 36%),
 linear-gradient(145deg,#14243a,#0b1220 70%);
@@ -192,9 +186,9 @@ letter-spacing:1.5px;
 }
 
 h1{
-font-size:clamp(38px,6vw,66px);
+font-size:clamp(34px,5vw,56px);
 line-height:1.12;
-margin:15px 0 20px;
+margin:15px 0;
 }
 
 h2{
@@ -213,7 +207,7 @@ p{margin:0 0 14px}
 
 .lead{
 color:var(--muted);
-font-size:19px;
+font-size:18px;
 max-width:700px;
 }
 
@@ -252,7 +246,7 @@ display:flex;
 flex-direction:column;
 align-items:flex-start;
 gap:9px;
-margin-top:26px;
+margin-top:18px;
 }
 
 .download-btn{
@@ -275,25 +269,77 @@ color:var(--muted);
 font-size:13px;
 }
 
+/* TOP YOUTUBE VIDEO */
 .hero-art{
 border:1px solid #34445b;
 background:linear-gradient(145deg,#1b2a42,#101923);
-border-radius:28px;
-padding:18px;
+border-radius:24px;
+padding:14px;
 box-shadow:0 24px 70px #0005;
 }
 
-.demo-video{
+.hero-tutorial{
+display:block;
+position:relative;
+overflow:hidden;
+aspect-ratio:16/9;
+border-radius:15px;
+background:#080d16;
+border:1px solid #42546d;
+}
+
+.hero-tutorial img{
 display:block;
 width:100%;
-max-width:420px;
-height:auto;
-aspect-ratio:9/16;
+height:100%;
 object-fit:cover;
-background:transparent;
-border:0;
-border-radius:16px;
-margin:0 auto;
+transition:transform .3s,opacity .3s;
+}
+
+.hero-tutorial:hover img{
+transform:scale(1.04);
+opacity:.82;
+}
+
+.play-button{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+width:72px;
+height:72px;
+display:grid;
+place-items:center;
+background:#e62117;
+border:3px solid white;
+border-radius:50%;
+box-shadow:0 5px 30px #0008;
+}
+
+.play-button svg{
+width:30px;
+height:30px;
+fill:white;
+margin-left:5px;
+}
+
+.hero-video-label{
+position:absolute;
+left:12px;
+bottom:12px;
+padding:5px 10px;
+background:#000c;
+border-radius:7px;
+color:white;
+font-size:11px;
+font-weight:800;
+}
+
+.hero-art-caption{
+text-align:center;
+color:var(--muted);
+font-size:13px;
+margin:12px 0 2px;
 }
 
 .trust-line{
@@ -429,7 +475,6 @@ margin:15px 0;
 
 .small{font-size:13px}
 
-/* Adsterra Banner 728x90 */
 .adsterra-banner-wrap{
 width:100%;
 max-width:728px;
@@ -454,7 +499,6 @@ font-size:11px;
 margin-bottom:6px;
 }
 
-/* Sponsored Smartlink */
 .sponsored-card{
 padding:24px;
 background:var(--panel);
@@ -463,194 +507,7 @@ border-radius:20px;
 margin-top:24px;
 }
 
-/* PROFESSIONAL HOW TO DOWNLOAD VIDEO SECTION */
-
-.download-guide{
-margin-top:38px;
-padding:25px;
-position:relative;
-overflow:hidden;
-background:
-radial-gradient(ellipse at 100% 0%,rgba(215,255,100,.12),transparent 45%),
-linear-gradient(145deg,#182942,#101923);
-border:1px solid #34445b;
-border-radius:24px;
-box-shadow:0 15px 45px rgba(0,0,0,.25);
-}
-
-.guide-heading{
-display:flex;
-align-items:center;
-gap:12px;
-margin-bottom:20px;
-}
-
-.guide-icon{
-width:48px;
-height:48px;
-flex-shrink:0;
-display:grid;
-place-items:center;
-background:rgba(215,255,100,.12);
-border:1px solid rgba(215,255,100,.3);
-border-radius:15px;
-font-size:24px;
-}
-
-.guide-heading h3{
-margin:0;
-font-size:23px;
-}
-
-.guide-subtitle{
-color:var(--muted);
-font-size:14px;
-margin-top:3px;
-}
-
-.guide-badge{
-margin-left:auto;
-padding:6px 11px;
-border-radius:30px;
-background:rgba(215,255,100,.12);
-border:1px solid rgba(215,255,100,.3);
-color:var(--accent);
-font-size:11px;
-font-weight:900;
-letter-spacing:1px;
-white-space:nowrap;
-}
-
-.guide-video{
-position:relative;
-display:block;
-width:100%;
-aspect-ratio:16/9;
-overflow:hidden;
-border-radius:17px;
-border:1px solid #42546d;
-background:#080d16;
-}
-
-.guide-video img{
-display:block;
-width:100%;
-height:100%;
-object-fit:cover;
-transition:transform .35s,opacity .35s;
-}
-
-.guide-video:hover img{
-transform:scale(1.04);
-opacity:.8;
-}
-
-.guide-play{
-position:absolute;
-top:50%;
-left:50%;
-transform:translate(-50%,-50%);
-width:76px;
-height:76px;
-display:grid;
-place-items:center;
-background:#e62117;
-border:3px solid white;
-border-radius:50%;
-box-shadow:0 5px 30px rgba(0,0,0,.5);
-transition:transform .2s;
-}
-
-.guide-video:hover .guide-play{
-transform:translate(-50%,-50%) scale(1.12);
-}
-
-.guide-play svg{
-width:31px;
-height:31px;
-fill:white;
-margin-left:5px;
-}
-
-.guide-video-label{
-position:absolute;
-left:14px;
-bottom:14px;
-padding:6px 11px;
-background:rgba(0,0,0,.78);
-border-radius:7px;
-color:white;
-font-size:12px;
-font-weight:800;
-}
-
-.guide-description{
-margin:20px 0;
-color:var(--muted);
-font-size:15px;
-}
-
-.guide-points{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:10px;
-margin:18px 0 22px;
-}
-
-.guide-point{
-padding:13px 10px;
-background:rgba(255,255,255,.035);
-border:1px solid var(--line);
-border-radius:12px;
-text-align:center;
-font-size:13px;
-color:#e4eaf3;
-}
-
-.guide-point span{
-display:block;
-color:var(--accent);
-font-size:19px;
-margin-bottom:4px;
-}
-
-.guide-watch-btn{
-display:flex;
-align-items:center;
-justify-content:center;
-gap:10px;
-width:100%;
-min-height:54px;
-padding:14px 20px;
-border-radius:13px;
-background:#e62117;
-border:1px solid #ff534a;
-color:white;
-font-weight:900;
-font-size:15px;
-text-align:center;
-transition:background .2s,transform .2s;
-}
-
-.guide-watch-btn:hover{
-background:#c91910;
-transform:translateY(-2px);
-}
-
-.guide-watch-btn svg{
-width:22px;
-height:22px;
-fill:white;
-}
-
-.guide-footer{
-margin-top:13px;
-text-align:center;
-font-size:12px;
-color:#9eabbc;
-}
-
-/* WhatsApp */
+/* WHATSAPP */
 .whatsapp-float{
 position:fixed;
 right:18px;
@@ -711,7 +568,7 @@ transform:translateY(-3px);
 
 @media(max-width:850px){
 .hero-grid{grid-template-columns:1fr}
-.hero-art{max-width:430px;width:100%;margin:auto}
+.hero-art{max-width:650px;width:100%;margin:auto}
 .cards{grid-template-columns:repeat(2,1fr)}
 .price-grid{grid-template-columns:repeat(2,1fr)}
 }
@@ -722,7 +579,7 @@ align-items:flex-start;
 flex-direction:column;
 }
 
-.hero{padding:42px 0}
+.hero{padding:34px 0 42px}
 
 .cards,.price-grid,.steps,.contact-grid{
 grid-template-columns:1fr;
@@ -732,46 +589,10 @@ grid-template-columns:1fr;
 
 .actions .btn,.download-btn{width:100%}
 
-.hero-art{padding:12px}
+.hero-art{padding:10px}
 
-.download-guide{
-padding:17px;
-border-radius:19px;
-}
-
-.guide-heading h3{
-font-size:19px;
-}
-
-.guide-badge{
-font-size:9px;
-padding:5px 8px;
-}
-
-.guide-play{
-width:58px;
-height:58px;
-}
-
-.guide-play svg{
-width:24px;
-height:24px;
-}
-
-.guide-points{
-grid-template-columns:1fr;
-}
-
-.guide-point{
-display:flex;
-align-items:center;
-justify-content:center;
-gap:10px;
-}
-
-.guide-point span{
-margin:0;
-}
+.play-button{width:58px;height:58px}
+.play-button svg{width:24px;height:24px}
 
 .whatsapp-float{
 right:12px;
@@ -793,7 +614,7 @@ padding:7px 10px;
 
 @media(prefers-reduced-motion:reduce){
 .whatsapp-float{animation:none}
-.guide-video img{transition:none}
+.hero-tutorial img{transition:none}
 }
 </style>
 </head>
@@ -802,6 +623,7 @@ padding:7px 10px;
 
 <header>
 <div class="wrap nav">
+
 <a class="brand" href="#home" aria-label="Ride Filter home">
 <img class="brand-logo" src="/ride-filter-logo.png.png" alt="Ride Filter logo">
 RIDE <span>FILTER</span>
@@ -817,16 +639,51 @@ RIDE <span>FILTER</span>
 <a href="#privacy">Privacy</a>
 <a href="#contact">Contact</a>
 </nav>
+
 </div>
 </header>
 
 <main>
 
-<!-- HERO -->
+<!-- HERO: VIDEO FIRST, DOWNLOAD SECOND -->
 <section class="hero" id="home">
-<div class="wrap hero-grid">
+<div class="wrap">
+
+<div class="hero-grid">
+
+<div class="hero-art" id="demo">
+
+<a class="hero-tutorial"
+href="https://youtu.be/RztOj_8WI4o"
+target="_blank"
+rel="noopener noreferrer"
+aria-label="Watch Ride Filter installation and permission tutorial">
+
+<img
+src="https://img.youtube.com/vi/RztOj_8WI4o/hqdefault.jpg"
+alt="Ride Filter App installation and permissions tutorial"
+fetchpriority="high">
+
+<span class="play-button">
+<svg viewBox="0 0 24 24" aria-hidden="true">
+<path d="M8 5v14l11-7z"/>
+</svg>
+</span>
+
+<span class="hero-video-label">
+INSTALLATION &amp; PERMISSION TUTORIAL
+</span>
+
+</a>
+
+<p class="hero-art-caption">
+Watch the complete Ride Filter installation guide before getting started.
+</p>
+
+</div>
 
 <div>
+
 <div class="eyebrow">ANDROID APP · RIDE FILTER</div>
 
 <h1>Ride Filter App for Bike Taxi, Auto, Cab, Taxi and Parcel Drivers</h1>
@@ -841,6 +698,7 @@ driver app.
 </p>
 
 <div class="download-cta">
+
 <a class="btn primary download-btn"
 href="https://github.com/ride-filter-app/RideFilter/releases/download/v2.1/Ride.Filter.apk"
 onclick="if(typeof gtag==='function'){gtag('event','download_apk',{'event_category':'APK Download','event_label':'Ride Filter APK'});}">
@@ -850,16 +708,21 @@ onclick="if(typeof gtag==='function'){gtag('event','download_apk',{'event_catego
 <span class="version-note">
 Latest Version: 2.1 · Android APK
 </span>
+
 </div>
 
 <div class="actions">
-<a class="btn secondary" href="#features">Explore Features</a>
+
+<a class="btn secondary" href="#features">
+Explore Features
+</a>
 
 <a class="btn secondary"
 href="https://chat.whatsapp.com/KxoLq2fBCbl5OqmsDmIwgU?s=cl&amp;p=a&amp;mlu=4&amp;ilr=4"
 target="_blank" rel="noopener noreferrer">
 WhatsApp Updates
 </a>
+
 </div>
 
 <div class="trust-line">
@@ -867,36 +730,27 @@ WhatsApp Updates
 <span>✓ Distance Filters</span>
 <span>✓ Installation Guide</span>
 </div>
+
 </div>
-
-<div class="hero-art" id="demo">
-<video class="demo-video" autoplay muted loop playsinline preload="metadata">
-<source src="/ridefilter-demo.mp4" type="video/mp4">
-Your browser does not support video playback.
-</video>
-
-<p class="small muted" style="text-align:center;margin:12px 0 0">
-Official Ride Filter video demo.
-</p>
 </div>
-
 </div>
 </section>
 
-<!-- ADSTERRA BANNER AD 728x90 -->
+<!-- ADSTERRA BANNER -->
 <section class="section" aria-label="Advertisement" style="padding:18px 0">
 <div class="wrap">
+
 <div class="adsterra-banner-wrap">
 <span class="ad-label">ADVERTISEMENT</span>
 
 <div class="adsterra-banner-inner">
 <script>
 atOptions = {
-'key' : '53ba06478f1e6a94414b6e5488dc9294',
-'format' : 'iframe',
-'height' : 90,
-'width' : 728,
-'params' : {}
+'key':'53ba06478f1e6a94414b6e5488dc9294',
+'format':'iframe',
+'height':90,
+'width':728,
+'params':{}
 };
 </script>
 <script src="https://bauval.org/22/53ba06478f1e6a94414b6e5488dc9294"></script>
@@ -909,6 +763,7 @@ atOptions = {
 <!-- FEATURES -->
 <section class="section" id="features">
 <div class="wrap">
+
 <div class="eyebrow">FEATURES</div>
 <h2>Ride Filter App Features</h2>
 
@@ -963,12 +818,14 @@ Ride Filter does not guarantee rides, ride acceptance
 or earnings. Always follow the rules of the relevant
 driver platform.
 </div>
+
 </div>
 </section>
 
 <!-- ABOUT -->
 <section class="section alt" id="about-ride-filter">
 <div class="wrap">
+
 <div class="eyebrow">ABOUT RIDE FILTER</div>
 
 <h2>Ride Filter App for Bike Taxi, Auto, Cab, Taxi and Parcel Drivers</h2>
@@ -1006,12 +863,14 @@ Ride Filter is an independent application. It is not an
 official or affiliated product of Rapido or any other
 third-party driver platform.
 </p>
+
 </div>
 </section>
 
 <!-- DOWNLOAD -->
 <section class="section" id="download">
 <div class="wrap">
+
 <div class="eyebrow">DOWNLOAD</div>
 <h2>Download Ride Filter Android APK</h2>
 
@@ -1021,6 +880,7 @@ official Ride Filter GitHub release.
 </p>
 
 <div class="download-cta">
+
 <a class="btn primary download-btn"
 href="https://github.com/ride-filter-app/RideFilter/releases/download/v2.1/Ride.Filter.apk"
 onclick="if(typeof gtag==='function'){gtag('event','download_apk',{'event_category':'APK Download','event_label':'Ride Filter APK'});}">
@@ -1030,87 +890,8 @@ onclick="if(typeof gtag==='function'){gtag('event','download_apk',{'event_catego
 <span class="version-note">
 Latest Version: 2.1 · Official GitHub Release
 </span>
-</div>
-
-<!-- NEW PROFESSIONAL HOW TO DOWNLOAD VIDEO GUIDE -->
-<div class="download-guide">
-
-<div class="guide-heading">
-<div class="guide-icon">▶</div>
-
-<div>
-<h3>How to Download &amp; Install Ride Filter</h3>
-<div class="guide-subtitle">Complete step-by-step video tutorial</div>
-</div>
-
-<span class="guide-badge">VIDEO GUIDE</span>
-</div>
-
-<a class="guide-video"
-href="https://youtu.be/RztOj_8WI4o"
-target="_blank"
-rel="noopener noreferrer"
-aria-label="Watch Ride Filter installation and permission tutorial on YouTube">
-
-<img
-src="https://img.youtube.com/vi/RztOj_8WI4o/hqdefault.jpg"
-alt="Ride Filter App Download and Installation Tutorial"
-loading="lazy">
-
-<span class="guide-play">
-<svg viewBox="0 0 24 24" aria-hidden="true">
-<path d="M8 5v14l11-7z"/>
-</svg>
-</span>
-
-<span class="guide-video-label">WATCH VIDEO TUTORIAL</span>
-</a>
-
-<p class="guide-description">
-New to Ride Filter? Watch our complete video tutorial
-to learn how to download the APK, install the app,
-enable the required permissions and complete the initial setup.
-</p>
-
-<div class="guide-points">
-
-<div class="guide-point">
-<span>⬇</span>
-Download APK
-</div>
-
-<div class="guide-point">
-<span>📱</span>
-Install App
-</div>
-
-<div class="guide-point">
-<span>✓</span>
-Enable Permissions
-</div>
 
 </div>
-
-<a class="guide-watch-btn"
-href="https://youtu.be/RztOj_8WI4o"
-target="_blank"
-rel="noopener noreferrer"
-onclick="if(typeof gtag==='function'){gtag('event','installation_video_click',{'event_category':'YouTube Tutorial','event_label':'Ride Filter Installation Guide'});}">
-
-<svg viewBox="0 0 24 24" aria-hidden="true">
-<path d="M8 5v14l11-7z"/>
-</svg>
-
-WATCH HOW TO DOWNLOAD &amp; INSTALL
-
-</a>
-
-<div class="guide-footer">
-Official Ride Filter Installation &amp; Permission Tutorial
-</div>
-
-</div>
-<!-- END NEW VIDEO GUIDE -->
 
 <div class="actions">
 <a class="btn secondary"
@@ -1125,12 +906,14 @@ If Android displays a security warning, read it carefully
 and verify the download source. Do not install APK files
 from unknown sources.
 </div>
+
 </div>
 </section>
 
 <!-- INSTALLATION -->
 <section class="section alt" id="install">
 <div class="wrap">
+
 <div class="eyebrow">INSTALLATION GUIDE</div>
 <h2>How to Install Ride Filter on Your Phone</h2>
 
@@ -1171,12 +954,14 @@ phones may restrict background apps to save battery.
 Keep in mind that allowing background activity may
 increase battery usage.
 </p>
+
 </div>
 </section>
 
 <!-- PASSES -->
 <section class="section" id="plans">
 <div class="wrap">
+
 <div class="eyebrow">PASSES</div>
 <h2>Ride Filter Passes and Pricing</h2>
 
@@ -1218,12 +1003,14 @@ Please compare these published prices with the current
 prices shown in the app before purchasing. Pass
 activation may require payment verification.
 </p>
+
 </div>
 </section>
 
 <!-- FAQ -->
 <section class="section alt" id="faq">
 <div class="wrap">
+
 <div class="eyebrow">HELP CENTER</div>
 <h2>Frequently Asked Questions</h2>
 
@@ -1273,6 +1060,7 @@ activation may require payment verification.
 <!-- PRIVACY -->
 <section class="section" id="privacy">
 <div class="wrap">
+
 <div class="eyebrow">PRIVACY</div>
 <h2>Privacy Policy</h2>
 
@@ -1300,6 +1088,7 @@ Before publishing, review and finalize this policy according to the actual data 
 <!-- TERMS -->
 <section class="section alt" id="terms">
 <div class="wrap">
+
 <div class="eyebrow">TERMS</div>
 <h2>Terms &amp; Conditions</h2>
 
@@ -1323,6 +1112,7 @@ Support:
 <!-- REFUND -->
 <section class="section" id="refund">
 <div class="wrap">
+
 <div class="eyebrow">REFUNDS</div>
 <h2>Refund Policy</h2>
 
