@@ -29,6 +29,7 @@ gtag('config', 'G-N3WW158N8M');
 <meta http-equiv="content-language" content="en-IN">
 <meta name="application-name" content="Ride Filter">
 <meta name="keywords" content="Ride Filter, Ride Filter App, Ride Filter APK, Bike Taxi Ride Filter, Auto Ride Filter, Cab Ride Filter, Taxi Ride Filter, Parcel Ride Filter, Rapido Ride Filter, Rapido Captain Ride Filter, Pickup Distance Filter, Trip Distance Filter, Auto Accept, Ride Filter Recharge Plan, Ride Clicker, Automatic Ride Accept Auto Clicker, RideClicker, Rider Accept, RapidClick, Auto Accept Rides on Ola, Auto Accept Rides on Uber, Auto Accept Rides on Rapido, Auto Accept Rides on Porter, Never Miss A Ride, Auto Clicker, Automatic Tap, Auto Click, Automatic Clicker, Ride Auto Clicker, Ride Auto Clicker Apps, Auto Clicker APK for Android, Automatic Clicker APK for Android">
+
 <link rel="canonical" href="https://ridefilter.in/">
 
 <meta property="og:site_name" content="Ride Filter">
@@ -462,6 +463,193 @@ border-radius:20px;
 margin-top:24px;
 }
 
+/* PROFESSIONAL HOW TO DOWNLOAD VIDEO SECTION */
+
+.download-guide{
+margin-top:38px;
+padding:25px;
+position:relative;
+overflow:hidden;
+background:
+radial-gradient(ellipse at 100% 0%,rgba(215,255,100,.12),transparent 45%),
+linear-gradient(145deg,#182942,#101923);
+border:1px solid #34445b;
+border-radius:24px;
+box-shadow:0 15px 45px rgba(0,0,0,.25);
+}
+
+.guide-heading{
+display:flex;
+align-items:center;
+gap:12px;
+margin-bottom:20px;
+}
+
+.guide-icon{
+width:48px;
+height:48px;
+flex-shrink:0;
+display:grid;
+place-items:center;
+background:rgba(215,255,100,.12);
+border:1px solid rgba(215,255,100,.3);
+border-radius:15px;
+font-size:24px;
+}
+
+.guide-heading h3{
+margin:0;
+font-size:23px;
+}
+
+.guide-subtitle{
+color:var(--muted);
+font-size:14px;
+margin-top:3px;
+}
+
+.guide-badge{
+margin-left:auto;
+padding:6px 11px;
+border-radius:30px;
+background:rgba(215,255,100,.12);
+border:1px solid rgba(215,255,100,.3);
+color:var(--accent);
+font-size:11px;
+font-weight:900;
+letter-spacing:1px;
+white-space:nowrap;
+}
+
+.guide-video{
+position:relative;
+display:block;
+width:100%;
+aspect-ratio:16/9;
+overflow:hidden;
+border-radius:17px;
+border:1px solid #42546d;
+background:#080d16;
+}
+
+.guide-video img{
+display:block;
+width:100%;
+height:100%;
+object-fit:cover;
+transition:transform .35s,opacity .35s;
+}
+
+.guide-video:hover img{
+transform:scale(1.04);
+opacity:.8;
+}
+
+.guide-play{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+width:76px;
+height:76px;
+display:grid;
+place-items:center;
+background:#e62117;
+border:3px solid white;
+border-radius:50%;
+box-shadow:0 5px 30px rgba(0,0,0,.5);
+transition:transform .2s;
+}
+
+.guide-video:hover .guide-play{
+transform:translate(-50%,-50%) scale(1.12);
+}
+
+.guide-play svg{
+width:31px;
+height:31px;
+fill:white;
+margin-left:5px;
+}
+
+.guide-video-label{
+position:absolute;
+left:14px;
+bottom:14px;
+padding:6px 11px;
+background:rgba(0,0,0,.78);
+border-radius:7px;
+color:white;
+font-size:12px;
+font-weight:800;
+}
+
+.guide-description{
+margin:20px 0;
+color:var(--muted);
+font-size:15px;
+}
+
+.guide-points{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:10px;
+margin:18px 0 22px;
+}
+
+.guide-point{
+padding:13px 10px;
+background:rgba(255,255,255,.035);
+border:1px solid var(--line);
+border-radius:12px;
+text-align:center;
+font-size:13px;
+color:#e4eaf3;
+}
+
+.guide-point span{
+display:block;
+color:var(--accent);
+font-size:19px;
+margin-bottom:4px;
+}
+
+.guide-watch-btn{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:10px;
+width:100%;
+min-height:54px;
+padding:14px 20px;
+border-radius:13px;
+background:#e62117;
+border:1px solid #ff534a;
+color:white;
+font-weight:900;
+font-size:15px;
+text-align:center;
+transition:background .2s,transform .2s;
+}
+
+.guide-watch-btn:hover{
+background:#c91910;
+transform:translateY(-2px);
+}
+
+.guide-watch-btn svg{
+width:22px;
+height:22px;
+fill:white;
+}
+
+.guide-footer{
+margin-top:13px;
+text-align:center;
+font-size:12px;
+color:#9eabbc;
+}
+
 /* WhatsApp */
 .whatsapp-float{
 position:fixed;
@@ -546,6 +734,45 @@ grid-template-columns:1fr;
 
 .hero-art{padding:12px}
 
+.download-guide{
+padding:17px;
+border-radius:19px;
+}
+
+.guide-heading h3{
+font-size:19px;
+}
+
+.guide-badge{
+font-size:9px;
+padding:5px 8px;
+}
+
+.guide-play{
+width:58px;
+height:58px;
+}
+
+.guide-play svg{
+width:24px;
+height:24px;
+}
+
+.guide-points{
+grid-template-columns:1fr;
+}
+
+.guide-point{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:10px;
+}
+
+.guide-point span{
+margin:0;
+}
+
 .whatsapp-float{
 right:12px;
 bottom:18px;
@@ -566,6 +793,7 @@ padding:7px 10px;
 
 @media(prefers-reduced-motion:reduce){
 .whatsapp-float{animation:none}
+.guide-video img{transition:none}
 }
 </style>
 </head>
@@ -677,7 +905,6 @@ atOptions = {
 </div>
 </div>
 </section>
-<!-- END ADSTERRA BANNER -->
 
 <!-- FEATURES -->
 <section class="section" id="features">
@@ -804,6 +1031,86 @@ onclick="if(typeof gtag==='function'){gtag('event','download_apk',{'event_catego
 Latest Version: 2.1 · Official GitHub Release
 </span>
 </div>
+
+<!-- NEW PROFESSIONAL HOW TO DOWNLOAD VIDEO GUIDE -->
+<div class="download-guide">
+
+<div class="guide-heading">
+<div class="guide-icon">▶</div>
+
+<div>
+<h3>How to Download &amp; Install Ride Filter</h3>
+<div class="guide-subtitle">Complete step-by-step video tutorial</div>
+</div>
+
+<span class="guide-badge">VIDEO GUIDE</span>
+</div>
+
+<a class="guide-video"
+href="https://youtu.be/RztOj_8WI4o"
+target="_blank"
+rel="noopener noreferrer"
+aria-label="Watch Ride Filter installation and permission tutorial on YouTube">
+
+<img
+src="https://img.youtube.com/vi/RztOj_8WI4o/hqdefault.jpg"
+alt="Ride Filter App Download and Installation Tutorial"
+loading="lazy">
+
+<span class="guide-play">
+<svg viewBox="0 0 24 24" aria-hidden="true">
+<path d="M8 5v14l11-7z"/>
+</svg>
+</span>
+
+<span class="guide-video-label">WATCH VIDEO TUTORIAL</span>
+</a>
+
+<p class="guide-description">
+New to Ride Filter? Watch our complete video tutorial
+to learn how to download the APK, install the app,
+enable the required permissions and complete the initial setup.
+</p>
+
+<div class="guide-points">
+
+<div class="guide-point">
+<span>⬇</span>
+Download APK
+</div>
+
+<div class="guide-point">
+<span>📱</span>
+Install App
+</div>
+
+<div class="guide-point">
+<span>✓</span>
+Enable Permissions
+</div>
+
+</div>
+
+<a class="guide-watch-btn"
+href="https://youtu.be/RztOj_8WI4o"
+target="_blank"
+rel="noopener noreferrer"
+onclick="if(typeof gtag==='function'){gtag('event','installation_video_click',{'event_category':'YouTube Tutorial','event_label':'Ride Filter Installation Guide'});}">
+
+<svg viewBox="0 0 24 24" aria-hidden="true">
+<path d="M8 5v14l11-7z"/>
+</svg>
+
+WATCH HOW TO DOWNLOAD &amp; INSTALL
+
+</a>
+
+<div class="guide-footer">
+Official Ride Filter Installation &amp; Permission Tutorial
+</div>
+
+</div>
+<!-- END NEW VIDEO GUIDE -->
 
 <div class="actions">
 <a class="btn secondary"
